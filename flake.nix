@@ -12,11 +12,11 @@
 
 	outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
 		nixosConfigurations = {
-			# 'nixos' is the hostname
-			nixos = nixpkgs.lib.nixosSystem {
+			# 'nixos-gnome' is the hostname
+			nixos-gnome = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [
-					./configuration.nix
+					./hosts/nixos-gnome/configuration.nix
 
 					# make home-manager as a module of nix so that 
 					# home-manager configuration will be deployed automatically
@@ -25,7 +25,7 @@
 					{
 						home-manager.useGlobalPkgs = true;
 						home-manager.useUserPackages = true;
-						home-manager.users.konrad = import ./home.nix;
+						home-manager.users.konrad = import ./hosts/nixos-gnome/home.nix;
 					}
 				];
 			};
