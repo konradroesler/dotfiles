@@ -4,7 +4,6 @@
   programs = {
     firefox = {
       enable = true;
-      languagePacks = [ "de" "en-US" ];
 
       # Check about:policies#documentation for options
       policies = {
