@@ -70,9 +70,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -83,9 +80,6 @@
   environment.systemPackages = with pkgs; [
     neovim
   ];
-
-  # Enable VirtualBox
-  virtualisation.virtualbox.host.enable = true;
 
   # Should not be changed without need
   system.stateVersion = "24.05";

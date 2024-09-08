@@ -19,7 +19,12 @@
 		};
 	};
 
+  programs.firefox.enable = true;
+
 	programs.bash.enable = true;
+
+  # Enable virtualbox
+  virtualisation.virtualbox.host.enable = true;
 
 	home.stateVersion = "24.05";
 
