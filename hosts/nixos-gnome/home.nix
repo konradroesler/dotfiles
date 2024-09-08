@@ -1,6 +1,10 @@
 { lib, config, pkgs, ... }:
 
 {
+  imports = [
+    ./firefox.nix
+  ];
+
 	home.username = "konrad";
 	# force value, not doing so causes a conflict with `nixos/commons.nix`
 	home.homeDirectory = lib.mkForce "/home/konrad/";
@@ -18,8 +22,6 @@
 			init.defaultBranch = "main";
 		};
 	};
-
-  programs.firefox.enable = true;
 
 	programs.bash.enable = true;
 
