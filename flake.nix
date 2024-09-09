@@ -7,21 +7,11 @@
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-	outputs = { self, nixpkgs, ... } @ inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config = {
-          allowUnfree = true;
-        };
-      };
-    in
-    {
+	outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
 		nixosConfigurations = {
 			# 'nixpad' is the hostname
 			nixpad = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system inputs; };
+        system = "x86_64-linux";
 				modules = [
 					./hosts/nixpad/configuration.nix
 
