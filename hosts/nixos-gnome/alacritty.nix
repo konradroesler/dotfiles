@@ -9,7 +9,7 @@ in
     settings = {
       window.dimensions = {
         columns = 100;
-        lines = 20;
+        lines = 30;
       };
       window.opacity = 1;
       window.dynamic_padding = true;
