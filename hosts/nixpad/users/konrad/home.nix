@@ -18,11 +18,6 @@
 	# Let home manager install and manage itself
 	programs.home-manager.enable = true;
 
-	# Packages that should be installed to the user profile
-	home.packages = with pkgs; [
-		neofetch
-	];
-
   # Set default applications
   home.sessionVariables = {
     BROWSER = "firefox";
