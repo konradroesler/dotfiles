@@ -44,7 +44,8 @@
                     inherit inputs;
                   };
                   users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
-                    inherit inputs username homeDirectory;
+                    inputs = inputs;
+                    inherit username homeDirectory;
                   };
                   backupFileExtension = "backup";
                 };
