@@ -2,12 +2,12 @@
 
 {
   imports = [
-    ./../../modules/alacritty.nix
-    ./../../modules/git.nix
-    ./../../modules/starship.nix
-    ./../../modules/zsh.nix
-    ./../../modules/firefox.nix
-    ./../../modules/tmux.nix
+    ./../../../../modules/alacritty.nix
+    ./../../../../modules/git.nix
+    ./../../../../modules/starship.nix
+    ./../../../../modules/zsh.nix
+    ./../../../../modules/firefox.nix
+    ./../../../../modules/tmux.nix
   ];
 
 	home.username = "konrad";
