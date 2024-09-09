@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ./oh-my-zsh.nix;
+    ./oh-my-zsh.nix
   ];
 
   programs.zsh = {
