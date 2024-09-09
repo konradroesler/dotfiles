@@ -21,7 +21,7 @@
 		nixosConfigurations = {
 			# 'nixpad' is the hostname
 			nixpad = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system inputs };
+        specialArgs = { inherit system inputs; };
 				modules = [
 					./hosts/nixpad/configuration.nix
 
