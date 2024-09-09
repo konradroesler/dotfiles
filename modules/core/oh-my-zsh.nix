@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 
 {
-  oh-my-zsh = {
+  programs.zsh.oh-my-zsh = {
     enable = true;
     # TODO install "thefuck"
     plugins = [ "git" ];
