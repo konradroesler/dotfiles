@@ -36,19 +36,19 @@
           if includeHomeManager then
             [
               home-manager.nixosModules.home-manager
-              {
+              ({
                 home-manager = {
                   useUserPackages = true;
                   useGlobalPkgs = false;
                   extraSpecialArgs = {
                     inherit inputs;
                   };
-                  users."${username}" = (import ./hosts/${hostname}/users/${username}/home.nix {
+                  users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
                     inherit inputs username homeDirectory;
-                  });
+                  };
                   backupFileExtension = "backup";
                 };
-              }
+              })
             ]
           else
             [ ]
