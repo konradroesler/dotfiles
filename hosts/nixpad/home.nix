@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./alacritty.nix
-    ./firefox.nix
+    ../../modules/alacritty.nix
+    ../../modules/firefox.nix
   ];
 
 	home.username = "konrad";
