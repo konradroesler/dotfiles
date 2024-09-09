@@ -36,7 +36,7 @@
       };
       git_commit = {
         only_detached = true;
-        format "[$hash]($style) ";
+        format = "[$hash]($style) ";
         style = "bright-yellow bold";
       };
       git_state = {
