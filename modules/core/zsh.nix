@@ -14,7 +14,8 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "thefuck" ];
+      # TODO install "thefuck"
+      plugins = [ "git" ];
       theme = "robbyrussell";
     };
   };
