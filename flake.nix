@@ -45,7 +45,6 @@
                   };
                   users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
                     inherit inputs username homeDirectory;
-                    pkgs = nixpkgsFor."${system}";
                   };
                   backupFileExtension = "backup";
                 };
