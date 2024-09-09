@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -12,7 +12,7 @@
 
 	home.username = "konrad";
 	# force value, not doing so causes a conflict with `nixos/commons.nix`
-	home.homeDirectory = lib.mkForce "/home/konrad/";
+	home.homeDirectory = "/home/konrad/";
 
 	# Packages that should be installed to the user profile
 	home.packages = with pkgs; [
