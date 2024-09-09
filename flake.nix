@@ -7,22 +7,64 @@
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-	outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
-		nixosConfigurations = {
-			# 'nixpad' is the hostname
-			nixpad = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-				modules = [
-					./hosts/nixpad/configuration.nix
+	outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+    let 
+      inherit (nixpkgs.lib) nixosSystem;
 
-					home-manager.nixosModules.home-manager 
-					{
-						home-manager.useGlobalPkgs = true;
-						home-manager.useUserPackages = true;
-						home-manager.users.konrad = import ./hosts/nixpad/home.nix;
-					}
-				];
+      # Create NixOs configuration with specified hostname and username
+      createNixosConfiguration = 
+      {
+        system,
+        username,
+        homeDirectory,
+        hostname ? null,
+        modules ? [ ],
+        includeHomeManager ? true,
+      }:
+      nixosSystem {
+
+        inherit system;
+        specialArgs = {
+          inherit inputs username homeDirectory hostname;
+        };
+        modules =
+        [
+          .hosts/${hostname}/configuration.nix
+          { networking.hostName = hostname; }
+        ]
+        ++ (
+          if includeHomeManager then
+            [
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  useUserPackages = true;
+                  useGlobalPkgs = false;
+                  extraSpecialArgs = {
+                    inherit inputs;
+                  };
+                  users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
+                    inherit inputs username homeDirectory;
+                    pkgs = nixpkgsFor."${system}";
+                  };
+                  backupFileExtension = "backup";
+                };
+              }
+            ]
+          else
+            [ ]
+        )
+        ++ modules;
+      };
+    in
+    {
+		nixosConfigurations = {
+			nixpad = createNixosConfiguration {
+        system = "x86_64-linux";
+        username = "konrad"
+        homeDirectory = "/home/redyf/";
+        hostname = "nixpad";
 			};
 		};
-	};
+  };
 }
