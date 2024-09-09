@@ -73,6 +73,13 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Automate garbace collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
   # Enable virtualbox
   virtualisation.virtualbox.host.enable = true;
 
