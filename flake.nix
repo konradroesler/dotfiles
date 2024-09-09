@@ -61,7 +61,7 @@
 		nixosConfigurations = {
 			nixpad = createNixosConfiguration {
         system = "x86_64-linux";
-        username = "konrad"
+        username = "konrad";
         homeDirectory = "/home/redyf/";
         hostname = "nixpad";
 			};
