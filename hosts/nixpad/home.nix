@@ -4,6 +4,7 @@
   imports = [
     ./../../modules/core/alacritty.nix
     ./../../modules/core/git.nix
+    ./../../modules/core/starship.nix
     ./../../modules/core/zsh.nix
     ./../../modules/home/firefox.nix
     ./../../modules/home/tmux.nix
