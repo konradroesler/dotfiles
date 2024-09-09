@@ -15,6 +15,13 @@
 		neofetch
 	];
 
+  # Set default applications
+  home.sessionVariables = {
+    BROWSER = "firefox";
+    EDITOR = "nvim";
+    TERMINAL = "alacritty";
+  };
+
 	programs.git = {
 		enable = true;
 		userName = "konradroesler";
