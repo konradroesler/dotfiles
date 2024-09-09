@@ -73,6 +73,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Set default shell to zsh
+  users.defaultUserShell = pkgs.zsh;
+
   # Automate garbace collection
   nix.gc = {
     automatic = true;
