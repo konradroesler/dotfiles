@@ -29,7 +29,7 @@
         };
         modules =
         [
-          .hosts/${hostname}/configuration.nix
+          ./hosts/${hostname}/configuration.nix
           { networking.hostName = hostname; }
         ]
         ++ (
