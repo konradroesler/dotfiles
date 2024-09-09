@@ -74,6 +74,8 @@
   nixpkgs.config.allowUnfree = true;
 
   # Set default shell to zsh
+  # Zsh is configured using home-manager
+  programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
   # Automate garbace collection
