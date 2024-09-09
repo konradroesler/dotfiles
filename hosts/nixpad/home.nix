@@ -3,6 +3,7 @@
 {
   imports = [
     ./../../modules/core/alacritty.nix
+    ./../../modules/core/git.nix
     ./../../modules/core/zsh.nix
     ./../../modules/home/firefox.nix
   ];
@@ -22,15 +23,6 @@
     EDITOR = "nvim";
     TERMINAL = "alacritty";
   };
-
-	programs.git = {
-		enable = true;
-		userName = "konradroesler";
-		userEmail = "konrad.rosler@gmail.com";
-		extraConfig = {
-			init.defaultBranch = "main";
-		};
-	};
 
 	programs.bash.enable = true;
 
