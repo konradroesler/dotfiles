@@ -43,9 +43,9 @@
                   extraSpecialArgs = {
                     inherit inputs;
                   };
-                  users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
+                  users."${username}" = (import ./hosts/${hostname}/users/${username}/home.nix {
                     inherit inputs username homeDirectory;
-                  };
+                  });
                   backupFileExtension = "backup";
                 };
               }
