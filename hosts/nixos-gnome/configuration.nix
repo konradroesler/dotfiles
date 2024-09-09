@@ -94,6 +94,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     neovim
+    tree
   ];
 
   # Should not be changed without need
