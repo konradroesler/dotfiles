@@ -6,6 +6,7 @@
     ./../../modules/core/git.nix
     ./../../modules/core/zsh.nix
     ./../../modules/home/firefox.nix
+    ./../../modules/home/tmux.nix
   ];
 
 	home.username = "konrad";
