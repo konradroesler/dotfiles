@@ -25,6 +25,18 @@
 
 	programs.bash.enable = true;
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    
+    history = {
+      size = 10000;
+      path = "${config.xdg.dataHome}/zsh/history";
+    };
+  };
+
 	home.stateVersion = "24.05";
 
 	# Let home manager install and manage itself
