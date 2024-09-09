@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./../../modules/home/alacritty.nix
+    ./../../modules/core/alacritty.nix
+    ./../../modules/core/zsh.nix
     ./../../modules/home/firefox.nix
   ];
 
