@@ -7,6 +7,10 @@ in
   programs.alacritty = {
     enable = true;
     settings = {
+      window.dimensions = {
+        columns = 100;
+        lines = 20;
+      };
       window.opacity = 1;
       window.dynamic_padding = true;
       window.padding = {
