@@ -36,7 +36,7 @@
           if includeHomeManager then
             [
               home-manager.nixosModules.home-manager
-              ({
+              {
                 home-manager = {
                   useUserPackages = true;
                   useGlobalPkgs = false;
@@ -48,7 +48,7 @@
                   };
                   backupFileExtension = "backup";
                 };
-              })
+              }
             ]
           else
             [ ]
