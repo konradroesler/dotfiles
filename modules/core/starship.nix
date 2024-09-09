@@ -5,9 +5,9 @@
     enable = true;
     settings = {
       add_newline = false;
-      format = "$shlvl$shell$user$name#hostname#nix_shell$git_branch$git_commit$git_state$direcory$jobs$cmd_duration$character";
+      format = "$shlvl$shell$user$name$hostname$nix_shell$git_branch$git_commit$git_state$direcory$jobs$cmd_duration$character";
       shlvl = {
-        disables = false;
+        disabled = false;
         style = "bright-red bold";
       };
       shell = {
