@@ -7,17 +7,24 @@
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 	};
 
-	outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
+	outputs = { self, nixpkgs, ... } @ inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+      };
+    in
+    {
 		nixosConfigurations = {
 			# 'nixpad' is the hostname
 			nixpad = nixpkgs.lib.nixosSystem {
-				system = "x86_64-linux";
+        specialArgs = { inherit system inputs };
 				modules = [
 					./hosts/nixpad/configuration.nix
 
-					# make home-manager as a module of nix so that 
-					# home-manager configuration will be deployed automatically
-					# when executing `nixos-rebuild switch`
 					home-manager.nixosModules.home-manager 
 					{
 						home-manager.useGlobalPkgs = true;
