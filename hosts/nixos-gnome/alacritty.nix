@@ -7,7 +7,7 @@ in
   programs.alacritty = {
     enable = true;
     settings = {
-      window.opacity = 0.95;
+      window.opacity = 1;
       window.dynamic_padding = true;
       window.padding = {
         x = 5;
@@ -15,12 +15,12 @@ in
       };
       scrolling.history = 10000;
 
-      # font = {
+      font = {
       # normal.family = font;
       # bold.family = font;
       # italic.family = font;
-      # size = 18;
-      # };
+        size = 18;
+      };
     };
   };
 }
