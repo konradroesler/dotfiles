@@ -5,6 +5,9 @@
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-24.05";
 		home-manager.url = "github:nix-community/home-manager/release-24.05";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Hyprland
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; 
 	};
 
 	outputs = { self, nixpkgs, home-manager, ... } @ inputs:
@@ -22,7 +25,6 @@
         includeHomeManager ? true,
       }:
       nixosSystem {
-
         inherit system;
         specialArgs = {
           inherit inputs username homeDirectory hostname;
