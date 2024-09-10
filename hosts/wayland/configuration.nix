@@ -12,7 +12,6 @@
       # ./../../system/locale.nix
       ./../../system/nix.nix
       # ./../../system/pipewire.nix
-      # ./../../system/sway.nix
       # ./../../system/virtualisation.nix
       ./../../system/hyprland.nix
     ];
