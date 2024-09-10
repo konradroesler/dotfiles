@@ -45,7 +45,7 @@
                   };
                   users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
                     inputs = inputs;
-                    lib = nixpkgs.lib;
+                    lib = nixpkgs.lib;  # not sure if this is elegant
                     inherit username homeDirectory;
                   };
                   backupFileExtension = "backup";
