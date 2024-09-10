@@ -1,4 +1,4 @@
-{ username, homeDirectory, ... }:
+{ lib, username, homeDirectory, ... }:
 
 {
   imports = [
@@ -10,10 +10,9 @@
     ./../../../../modules/tmux.nix
   ];
 
-  home = {
-   inherit username homeDirectory;
-   stateVersion = "24.05";
-  };
+  home.username = username;
+  home.homeDirectory = lib.mkForce homeDirectory;
+  home.stateVersion = "24.05";
 
 	# Let home manager install and manage itself
 	programs.home-manager.enable = true;
