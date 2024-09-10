@@ -13,6 +13,8 @@
       ./../../system/nix.nix
       ./../../system/pipewire.nix
       ./../../system/virtualisation.nix
+      ./../../system/wayland.nix
+      # ./../../system/hyprland.nix
     ];
 
   networking.hostName = hostname;
