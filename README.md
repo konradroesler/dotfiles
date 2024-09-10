@@ -12,7 +12,7 @@ Use graphical installer to install NixOs (without desktop). Then do the followin
 
 ```shell
 nix-shell -p git
-mkdir .dotfiles`
+mkdir .dotfiles
 git clone https://github.com/konradroesler/dotfiles.git .dotfiles
 cd .dotfiles
 rm hosts/<hostname>/hardware-configuration.nix
