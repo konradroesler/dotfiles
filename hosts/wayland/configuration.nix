@@ -9,24 +9,16 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./../../system/boot.nix
-      ./../../system/locale.nix
+      # ./../../system/locale.nix
       ./../../system/nix.nix
-      ./../../system/pipewire.nix
-      ./../../system/sway.nix
-      ./../../system/virtualisation.nix
-      # ./../../system/hyprland.nix
+      # ./../../system/pipewire.nix
+      # ./../../system/sway.nix
+      # ./../../system/virtualisation.nix
+      ./../../system/hyprland.nix
     ];
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Berlin";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  programs.zsh.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
@@ -36,16 +28,15 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
     neovim
     tree
   ];
+  programs.zsh.enable = true;
 
-  # Enable sway
-  programs.sway.enable = true;
+  # Set your time zone.
+  time.timeZone = "Europe/Berlin";
 
   # Should not be changed without need
   system.stateVersion = "24.05";
