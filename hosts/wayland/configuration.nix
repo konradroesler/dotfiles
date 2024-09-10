@@ -12,8 +12,8 @@
       ./../../system/locale.nix
       ./../../system/nix.nix
       ./../../system/pipewire.nix
+      ./../../system/sway.nix
       ./../../system/virtualisation.nix
-      ./../../system/wayland.nix
       # ./../../system/hyprland.nix
     ];
 
