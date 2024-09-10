@@ -1,12 +1,7 @@
 My personal dotfiles for all systems, configured using Nix and Home Manager.
 
+I'm still figuring this out so theres no guarantee the flakes will actually build :)
 
-# To-Do
-
-- get copy paste capabilities in terminal
-- modularize with correct file structure
-- add basic nvim configuration
-
-# Issues
-
-- applications installed through Home Manager dont show in the Application Launcher in NixOs
+### To-Do
+- everything
+- darwin config
