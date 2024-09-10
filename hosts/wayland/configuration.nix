@@ -8,7 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./../../system
+      ./../../system/boot.nix
+      ./../../system/locale.nix
+      ./../../system/nix.nix
+      ./../../system/pipewire.nix
+      ./../../system/virtualisation.nix
     ];
 
   networking.hostName = hostname;
@@ -37,6 +41,9 @@
     neovim
     tree
   ];
+
+  # Enable sway
+  programs.sway.enable = true;
 
   # Should not be changed without need
   system.stateVersion = "24.05";

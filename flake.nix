@@ -66,6 +66,12 @@
         homeDirectory = "/home/konrad/";
         hostname = "nixpad";
 			};
+      wayland = createNixosConfiguration {
+        system = "x86_64-linux";
+        username = "konrad";
+        homeDirectory = "/home/konrad/";
+        hostname = "wayland";
+      };
 		};
   };
 }
