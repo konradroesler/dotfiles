@@ -7,7 +7,7 @@
     settings = {
       main = {
         term = "xterm-256color";
-        font = "MonoLisa:size=18";
+        # font = "MonoLisa:size=18";
         pad = "0x0 center";
       };
       cursor = {
