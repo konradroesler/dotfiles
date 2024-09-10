@@ -1,4 +1,4 @@
-{ username, userDirectory, ... }:
+{ username, homeDirectory, ... }:
 
 {
   imports = [
@@ -11,7 +11,7 @@
   ];
 
   home = {
-   inherit username userDirectory;
+   inherit username homeDirectory;
    stateVersion = "24.05";
   };
 
