@@ -4,7 +4,7 @@
   imports = [
     # ./../../../../modules/alacritty.nix
     # ./../../../../modules/foot.nix
-    # ./../../../../modules/git.nix
+    ./../../../../modules/git.nix
     # ./../../../../modules/starship.nix
     # ./../../../../modules/zsh.nix
     # ./../../../../modules/firefox.nix
