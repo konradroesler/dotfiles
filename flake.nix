@@ -1,16 +1,18 @@
 {
-	description = "Konrad's flake";
+  description = "Konrad's flake";
 
   inputs = { 
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-24.05";
-		home-manager.url = "github:nix-community/home-manager/release-24.05";
-		home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Home Manager
+    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Hyprland
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; 
-	};
+  };
 
-	outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let 
       inherit (nixpkgs.lib) nixosSystem;
 
@@ -61,19 +63,19 @@
       };
     in
     {
-		nixosConfigurations = {
-			nixpad = createNixosConfiguration {
+    nixosConfigurations = {
+      nixpad = createNixosConfiguration {
         system = "x86_64-linux";
         username = "konrad";
         homeDirectory = "/home/konrad/";
         hostname = "nixpad";
-			};
+      };
       wayland = createNixosConfiguration {
         system = "x86_64-linux";
         username = "konrad";
         homeDirectory = "/home/konrad/";
         hostname = "wayland";
       };
-		};
+    };
   };
 }
