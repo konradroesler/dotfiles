@@ -16,6 +16,9 @@
       # ./../../system/hyprland.nix
       # ./../../system/services.nix
     ];
+  
+  # Brightness control
+  services.illum.enable = true;
 
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
@@ -33,7 +36,6 @@
   programs.hyprland.enable = true;
   
   services.openssh.enable = true;
-
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
