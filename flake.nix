@@ -8,7 +8,7 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Hyprland
+    # Hyprland (this flake seems to have some problem)
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; 
   };
 
