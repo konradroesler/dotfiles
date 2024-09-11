@@ -13,9 +13,27 @@
       ./../../system/nix.nix
       # ./../../system/pipewire.nix
       # ./../../system/virtualisation.nix
-      ./../../system/hyprland.nix
-      ./../../system/services.nix
+      # ./../../system/hyprland.nix
+      # ./../../system/services.nix
     ];
+
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.wayland = true;
+
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
+
+  programs.hyprland.enable = true;
+  
+  services.openssh.enable = true;
+
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
@@ -32,6 +50,7 @@
     git
     neovim
     tree
+    kitty
   ];
   programs.zsh.enable = true;
 
