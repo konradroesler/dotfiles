@@ -1,12 +1,13 @@
-My personal dotfiles for all systems, configured using Nix and Home Manager.
+Mjjjjjjjjjjjjjjkkkkkkkky personal dotfiles for all systems, configured using Nix and Home Manager.
 
 I'm still figuring this out so theres no guarantee the flakes will actually build :)
 
 ### To-Do
 - everything
 - darwin config
+- manage host specific configuration
 
-### Run on NixOs VM
+### Run on NixOs VM or metal
 
 Use graphical installer to install NixOs (without desktop). Then do the following steps:
 
