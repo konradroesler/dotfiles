@@ -3,8 +3,7 @@ Mjjjjjjjjjjjjjjkkkkkkkky personal dotfiles for all systems, configured using Nix
 I'm still figuring this out so theres no guarantee the flakes will actually build :)
 
 ### To-Do
-- everything
-- darwin config
+- everything darwin config
 - manage host specific configuration
 
 ### Run on NixOs VM or metal
@@ -20,3 +19,7 @@ rm hosts/<hostname>/hardware-configuration.nix
 cp /etc/nixos/hardware-configuration.nix hosts/<hostname>/
 sudo nixos-rebuild switch --flake .#<hostname>
 ```
+
+### Notes
+
+(wayland) If audio is not working try removing `~/.local/state/wireplumber` and reboot.

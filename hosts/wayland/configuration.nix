@@ -11,7 +11,7 @@
       ./../../system/boot.nix
       # ./../../system/locale.nix
       ./../../system/nix.nix
-      # ./../../system/pipewire.nix
+      ./../../system/pipewire.nix
       # ./../../system/virtualisation.nix
       ./../../system/hyprland.nix
       ./../../system/services.nix
