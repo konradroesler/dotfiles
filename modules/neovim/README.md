@@ -8,5 +8,4 @@ My NeoVim config managed using Nix but using lua.
 
 
 ### Credits
-
-`config/lua/konrad/set.lua` and `config/lua/konrad/remap.lua' copy from this ince [config](https://github.com/Kidsan/nixos-config)
+The nix integration and options/remaps are inspired by this nice [config](https://github.com/Kidsan/nixos-config).
