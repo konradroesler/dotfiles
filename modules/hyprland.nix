@@ -5,9 +5,10 @@
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     bind = [ 
-      "$mod, B, exec, firefox"
-      "$mod, Q, exec, kitty" 
-      "$mod, F, fullscreen"
+      "$mod, F, exec, firefox"
+      "$mod, Q, exec, foot"
+      # "$mod, F, fullscreen"
+
     ];
     bindel = [
       ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"

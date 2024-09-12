@@ -32,7 +32,6 @@
     git
     neovim
     tree
-    kitty
   ];
   programs.zsh.enable = true;
 
