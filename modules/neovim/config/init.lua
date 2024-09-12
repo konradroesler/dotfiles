@@ -14,11 +14,14 @@ vim.g.mapleader = " "
 vim.opt.termguicolors = true
 vim.opt.guicursor = ""
 
-require("lazy").setup("plugins", {
-  rocks = { enabled = false },
-  dev = {
-    path = "~/.local/share/nvim/nix",
-    fallback = false,
-  }
+require("lazy").setup({
+	spec = {
+		{ import = "plugins" },
+		-- If specified here, needs to return a valid spec
+		-- { import = "konrad" },
+	},
+	install = { },
+	checker = { enabled = true },
 })
--- require("konrad")
+require("konrad.set")
+require("konrad.remap")

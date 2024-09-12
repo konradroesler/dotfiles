@@ -1,5 +1,5 @@
 -- Telescope file browser
-vim.keymap.set("n", "<leader>pv", require "telescope".extensions.file_browser.file_browser, { noremap = true })
+-- vim.keymap.set("n", "<leader>pv", require "telescope".extensions.file_browser.file_browser, { noremap = true })
 
 -- Remove highlighting from last search
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
