@@ -16,6 +16,7 @@
       ./../../system/hyprland.nix
       ./../../system/services.nix
       ./../../system/fonts.nix
+			./../../system/environment.nix
     ];
   
   networking.hostName = hostname;

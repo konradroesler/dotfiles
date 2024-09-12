@@ -17,6 +17,8 @@ in
   home.packages = with pkgs; [
     ripgrep
     fd
+		clang-tools
+		clang
     # lua-lanuage-server
   ];
 

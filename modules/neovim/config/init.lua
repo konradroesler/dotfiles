@@ -17,11 +17,9 @@ vim.opt.guicursor = ""
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
-		-- If specified here, needs to return a valid spec
-		-- { import = "konrad" },
 	},
 	install = { },
-	checker = { enabled = true },
+	checker = { enabled = false },
 })
 require("konrad.set")
 require("konrad.remap")
