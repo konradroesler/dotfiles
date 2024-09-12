@@ -15,6 +15,7 @@
       # ./../../system/virtualisation.nix
       ./../../system/hyprland.nix
       ./../../system/services.nix
+      ./../../system/fonts.nix
     ];
   
   networking.hostName = hostname;

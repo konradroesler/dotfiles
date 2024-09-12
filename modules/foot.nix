@@ -7,7 +7,7 @@
     settings = {
       main = {
         term = "xterm-256color";
-        font = "monospace:size=14";
+        font = "FiraCodeNerdFont:size=14";
         # font = "MonoLisa:size=18";
         pad = "0x0 center";
         initial-window-size-pixels = "1400x900";

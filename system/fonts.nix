@@ -5,6 +5,8 @@
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "FiraCode" ]; }{
+    fira-code
+    fira-code-symbols
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }

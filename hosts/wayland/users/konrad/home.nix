@@ -9,6 +9,7 @@
     ./../../../../modules/firefox.nix
     ./../../../../modules/hyprland.nix
     ./../../../../modules/kitty.nix
+    ./../../../../modules/neovim/default.nix
   ];
 
   home.username = username;
