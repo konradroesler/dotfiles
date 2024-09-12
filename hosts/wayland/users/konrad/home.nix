@@ -2,12 +2,13 @@
 
 {
   imports = [
-    # ./../../../../modules/foot.nix
+    ./../../../../modules/foot.nix
     ./../../../../modules/git.nix
     ./../../../../modules/starship.nix
     ./../../../../modules/zsh.nix
     ./../../../../modules/firefox.nix
     ./../../../../modules/hyprland.nix
+    ./../../../../modules/kitty.nix
   ];
 
   home.username = username;
