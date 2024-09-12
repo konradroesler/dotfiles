@@ -5,9 +5,9 @@
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     bind = [ 
-      "$mod, F, exec, firefox"
+      "$mod, B, exec, firefox"
       "$mod, Q, exec, foot"
-      # "$mod, F, fullscreen"
+      "$mod, F, fullscreen"
 
     ];
     bindel = [
