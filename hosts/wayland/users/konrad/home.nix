@@ -7,7 +7,7 @@
     /starship.nix
     /zsh.nix
     /firefox.nix
-    /hyprland.nix
+    /hyprland
     /kitty.nix
     /neovim
 		/waybar
