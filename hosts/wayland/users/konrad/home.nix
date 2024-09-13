@@ -10,6 +10,7 @@
     ./../../../../modules/hyprland.nix
     ./../../../../modules/kitty.nix
     ./../../../../modules/neovim/default.nix
+		./../../../../modules/waybar
   ];
 
   home.username = username;
