@@ -15,6 +15,7 @@
       /hyprland.nix
       # /locale.nix
 			/misc.nix
+			/network.nix
       /nix.nix
       /pipewire.nix
       /services.nix
@@ -22,8 +23,6 @@
       # /virtualisation.nix
     ] (x: ./. + "../../../system" + x);
   
-  networking.hostName = hostname;
-  networking.networkmanager.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
@@ -33,11 +32,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  environment.systemPackages = with pkgs; [
-    git
-		vim
-    tree
-  ];
   programs.zsh.enable = true;
 
   # Set your time zone.
