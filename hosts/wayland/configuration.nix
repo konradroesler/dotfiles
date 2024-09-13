@@ -16,6 +16,7 @@
       # /locale.nix
 			/misc.nix
 			/network.nix
+			/nh.nix
       /nix.nix
       /pipewire.nix
       /services.nix
