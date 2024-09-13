@@ -1,18 +1,18 @@
 { lib, username, homeDirectory, ... }:
 
 {
-  imports = [
-    ./../../../../modules/foot.nix
-    ./../../../../modules/git.nix
-    ./../../../../modules/starship.nix
-    ./../../../../modules/zsh.nix
-    ./../../../../modules/firefox.nix
-    ./../../../../modules/hyprland.nix
-    ./../../../../modules/kitty.nix
-    ./../../../../modules/neovim/default.nix
-		./../../../../modules/waybar
-		./../../../../modules/rofi
-  ];
+  imports = lib.forEach [
+    /foot.nix
+    /git.nix
+    /starship.nix
+    /zsh.nix
+    /firefox.nix
+    /hyprland.nix
+    /kitty.nix
+    /neovim/default.nix
+		/waybar
+		/rofi
+  ] (x: ./. + "/../../../../modules" + x);
 
   home.username = username;
   home.homeDirectory = lib.mkForce homeDirectory;
