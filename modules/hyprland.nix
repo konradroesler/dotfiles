@@ -8,7 +8,7 @@
       "$mod, B, exec, firefox"
       "$mod, Q, exec, foot"
       "$mod, F, fullscreen"
-
+			"$mod, L, exec, rofi -show drun"
     ];
     bindel = [
       ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"

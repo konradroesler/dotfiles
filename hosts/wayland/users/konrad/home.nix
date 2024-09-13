@@ -11,6 +11,7 @@
     ./../../../../modules/kitty.nix
     ./../../../../modules/neovim/default.nix
 		./../../../../modules/waybar
+		./../../../../modules/rofi
   ];
 
   home.username = username;
