@@ -9,7 +9,7 @@
     /firefox.nix
     /hyprland.nix
     /kitty.nix
-    /neovim/default.nix
+    /neovim
 		/waybar
 		/rofi
   ] (x: ./. + "/../../../../modules" + x);

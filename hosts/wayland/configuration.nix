@@ -2,22 +2,25 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, username, hostname, ... }:
+{ lib, config, pkgs, username, hostname, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./../../system/boot.nix
-      # ./../../system/locale.nix
-      ./../../system/nix.nix
-      ./../../system/pipewire.nix
-      # ./../../system/virtualisation.nix
-      ./../../system/hyprland.nix
-      ./../../system/services.nix
-      ./../../system/fonts.nix
-			./../../system/environment.nix
-    ];
+		] ++ lib.forEach [
+      /boot.nix
+			/environment.nix
+      /fonts.nix
+      /hyprland.nix
+      # /locale.nix
+			/misc.nix
+      /nix.nix
+      /pipewire.nix
+      /services.nix
+			/thunar.nix
+      # /virtualisation.nix
+    ] (x: ./. + "../../../system" + x);
   
   networking.hostName = hostname;
   networking.networkmanager.enable = true;

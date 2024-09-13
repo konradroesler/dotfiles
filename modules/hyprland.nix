@@ -18,6 +18,10 @@
 		exec-once = [ "waybar" ];
   };
 
+	home.packages = with pkgs; [
+		swww
+	];
+
   home.pointerCursor = {
     gtk.enable = true;
     package = pkgs.bibata-cursors;
