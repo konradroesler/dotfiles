@@ -32,7 +32,7 @@
 
   environment.systemPackages = with pkgs; [
     git
-    neovim
+		vim
     tree
   ];
   programs.zsh.enable = true;

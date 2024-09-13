@@ -7,7 +7,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = false
 -- smart
-vim.opt.smartindent = true
+-- vim.opt.smartindent = true
 -- Makes long lines break at the screen edge
 -- so they are fully visible
 vim.opt.wrap = true
@@ -32,7 +32,7 @@ vim.opt.isfname:append("@-@")
 -- Frequency at which certain events are triggered
 vim.opt.updatetime = 750
 -- Highlight 80th column
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 -- Best mapleader
 vim.g.mapleader = " "
 -- Automatic save on buffer switch and other

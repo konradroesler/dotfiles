@@ -3,6 +3,7 @@
 
   inputs = { 
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-24.05";
+		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home Manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
@@ -12,10 +13,10 @@
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; 
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... } @ inputs:
     let 
       inherit (nixpkgs.lib) nixosSystem;
-
+			
       # Create NixOs configuration with specified hostname and username
       createNixosConfiguration = 
       {
@@ -46,6 +47,11 @@
                   useGlobalPkgs = false;
                   extraSpecialArgs = {
                     inherit inputs;
+										# For neovim 0.10
+										pkgs-unstable = import nixpkgs-unstable {
+											inherit system;
+											config.allowUnfree = true;
+										};
                   };
                   users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
                     inputs = inputs;

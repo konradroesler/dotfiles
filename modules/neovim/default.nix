@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, pkgs-unstable, ... }:
 
 let 
   treesitterWithGrammars = (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
@@ -17,6 +17,7 @@ in
   home.packages = with pkgs; [
     ripgrep
     fd
+		# needed for treesitter
 		clang-tools
 		clang
     # lua-lanuage-server
@@ -24,7 +25,8 @@ in
 
   programs.neovim = {
     enable = true;
-    # package = pkgs.neovim
+		# Use unstable so for 0.10
+    package = pkgs-unstable.neovim-unwrapped;
     coc.enable = false;
     withNodeJs = true;
 
