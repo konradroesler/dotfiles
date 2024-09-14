@@ -25,7 +25,6 @@
 			/wayland.nix
 			/xserver.nix
     ] (x: ./. + "../../../system" + x);
-  
 
   users.users.${username} = {
     isNormalUser = true;
@@ -34,5 +33,4 @@
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
   };
-
 }

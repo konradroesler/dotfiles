@@ -6,11 +6,19 @@
 		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home Manager
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+			url = "github:nix-community/home-manager/release-24.05";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
     # Hyprland (this flake seems to have some problem)
-    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; 
+		/*
+		hyprland = {
+			type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      submodules = true;
+    };
+		*/
   };
 
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... } @ inputs:
