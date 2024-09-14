@@ -2,10 +2,9 @@
   wayland.windowManager.hyprland.settings = {
     # Start sequences
     exec-once = [
-      # "systemctl --user import-environment &"
-      # "hash dbus-update-activation-environment 2>/dev/null &"
-      # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-      # "nm-applet &"
+      "systemctl --user import-environment &"
+      "hash dbus-update-activation-environment 2>/dev/null &"
+      "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
       # "wl-clip-persist --clipboard both"
       "swww-daemon"
       "swww img /home/konrad/.dotfiles/wallpapers/wall1.png"
@@ -18,8 +17,8 @@
       # "hyprlock"
 
       # App auto start
-      "[workspace 1 silent] firefox"
-      "[workspace 2 silent] foot"
+      "[workspace 1 silent] foot"
+      "[workspace 2 silent] firefox"
     ];
 
     input = {
@@ -60,7 +59,7 @@
     };
 
     dwindle = {
-      no_gaps_when_only = true;
+      no_gaps_when_only = false;
       force_split = 0;
       special_scale_factor = 1.0;
       split_width_multiplier = 1.0;
@@ -76,7 +75,7 @@
     };
 
     decoration = {
-      rounding = 0;
+      rounding = 10;
       # active_opacity = 0.90;
       # inactive_opacity = 0.90;
       # fullscreen_opacity = 1.0;
@@ -322,7 +321,7 @@
 		monitor=,preferred,auto,auto
 
 		xwayland {
-			force_zero_scaling = true
+			force_zero_scaling = false
 		}
 	";
 }
