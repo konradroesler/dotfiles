@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Enable sound with pipewire.
-  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     audio.enable = true;

@@ -13,15 +13,17 @@
 			/environment.nix
       /fonts.nix
       /hyprland.nix
-      # /locale.nix
 			/misc.nix
 			/network.nix
 			/nh.nix
       /nix.nix
       /pipewire.nix
+			/programs.nix
+			/security.nix
       /services.nix
-			/thunar.nix
+			/system.nix
       # /virtualisation.nix
+			/xserver.nix
     ] (x: ./. + "../../../system" + x);
   
 
@@ -33,11 +35,4 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  programs.zsh.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Berlin";
-
-  # Should not be changed without need
-  system.stateVersion = "24.05";
 }
