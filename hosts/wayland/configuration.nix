@@ -12,7 +12,6 @@
       /boot.nix
 			/environment.nix
       /fonts.nix
-      /hyprland.nix
 			/misc.nix
 			/network.nix
 			/nh.nix
@@ -23,6 +22,7 @@
       /services.nix
 			/system.nix
       # /virtualisation.nix
+			/wayland.nix
 			/xserver.nix
     ] (x: ./. + "../../../system" + x);
   
