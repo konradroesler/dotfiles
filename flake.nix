@@ -42,10 +42,16 @@
       modules ? [],
       includeHomeManager ? true,
     }:
+		let
+			pkgs-unstable = import nixpkgs-unstable {
+				inherit system;
+				config.allowUnfree = true;
+			};
+		in
       nixosSystem {
         inherit system;
         specialArgs = {
-          inherit inputs system username homeDirectory hostname;
+          inherit inputs pkgs-unstable system username homeDirectory hostname;
         };
         modules =
           [
@@ -61,11 +67,7 @@
                   useUserPackages = true;
                   useGlobalPkgs = false;
                   extraSpecialArgs = {
-                    inherit inputs;
-                    pkgs-unstable = import nixpkgs-unstable {
-                      inherit system;
-                      config.allowUnfree = true;
-                    };
+                    inherit inputs pkgs-unstable;
                   };
                   users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
                     inputs = inputs;

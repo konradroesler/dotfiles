@@ -138,33 +138,32 @@
       # keybindings
       "$mainMod, Return, exec, foot"
       "ALT, Return, exec, foot --title float_foot"
-      "$mainMod SHIFT, Return, exec, foot --start-as=fullscreen -o 'font_size=16'"
-      "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] firefox'"
+      "$mainMod, B, exec, firefox"
       "$mainMod, Q, killactive,"
       "$mainMod, F, fullscreen, 0"
-      "$mainMod SHIFT, F, fullscreen, 1"
       "$mainMod, Space, togglefloating,"
       "$mainMod, Space, centerwindow,"
       "$mainMod, Space, resizeactive, exact 950 600"
       "$mainMod, D, exec, rofi -show drun || pkill rofi"
       "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
-      "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
-      "$mainMod, Escape, exec, swaylock"
-      "ALT, Escape, exec, hyprlock"
+      "$mainMod, Escape, exec, hyprlock"
       "$mainMod SHIFT, Escape, exec, power-menu"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
       "$mainMod, T, exec, toggle_oppacity"
-      "$mainMod, E, exec, nautilus"
+      "$mainMod, E, exec, thunar"
       "$mainMod SHIFT, B, exec, toggle_waybar"
-      "$mainMod, C ,exec, hyprpicker -a"
-      "$mainMod, W,exec, wallpaper-picker"
+      "$mainMod, C, exec, hyprpicker -a"
+      "$mainMod, W, exec, wallpaper-picker"
       "$mainMod, N, exec, swaync-client -t -sw"
       "$mainMod SHIFT, W, exec, vm-start"
 
-      # screenshot
-      "$mainMod, Print, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
-      ",Print, exec, grimblast --notify --cursor --freeze copy area"
+      # screenshot a window
+      "$mainMod, PRINT, exec, hyprshot -m window --clipboard-only"
+      # screenshot a monitor
+      ", PRINT, exec, hyprshot -m active --mode output"
+      # screenshot area
+      "$mainMod SHIFT, PRINT, exec, hyprshot -m region --clipboard-only"
 
       # switch focus
       "$mainMod, left, movefocus, l"
