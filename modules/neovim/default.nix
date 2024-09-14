@@ -1,31 +1,33 @@
-{ lib, pkgs, pkgs-unstable, ... }:
-
-let 
-  treesitterWithGrammars = (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
+{
+  lib,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: let
+  treesitterWithGrammars = pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
     p.bash
     p.markdown
     p.lua
     p.nix
-  ]));
+  ]);
 
   treesitter-parsers = pkgs.symlinkJoin {
     name = "treesitter-parsers";
     paths = treesitterWithGrammars.dependencies;
   };
-in
-{
+in {
   home.packages = with pkgs; [
     ripgrep
     fd
-		# needed for treesitter
-		clang-tools
-		clang
+    # needed for treesitter
+    clang-tools
+    clang
     # lua-lanuage-server
   ];
 
   programs.neovim = {
     enable = true;
-		# Use unstable so for 0.10
+    # Use unstable so for 0.10
     package = pkgs-unstable.neovim-unwrapped;
     coc.enable = false;
     withNodeJs = true;

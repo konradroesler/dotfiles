@@ -1,6 +1,9 @@
-{ lib, config, pkgs, ... }:
-
 {
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   programs = {
     firefox = {
       enable = true;
@@ -25,7 +28,7 @@
         DisplayBookmarksToolbar = "never"; # alternatives: 'always' or 'newtab'
         DisplayMenuBar = "default-off"; # alternatives: 'always', 'never' or 'default-on'
         SearchBar = "unified"; # alternatives: 'separate'
-          
+
         # Check about:support for extensions/add-on ID strings
         # Valid string for installation mode are 'allowed', 'blocked',
         # 'force_installed' and 'normal_installed'

@@ -1,5 +1,3 @@
-_:
-
-{
+_: {
   virtualisation.virtualbox.host.enable = true;
 }

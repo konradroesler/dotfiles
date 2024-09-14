@@ -1,6 +1,8 @@
-{ lib, config, ... }:
-
 {
+  lib,
+  config,
+  ...
+}: {
   programs.foot = {
     enable = true;
     server.enable = true;
@@ -13,7 +15,7 @@
         initial-window-size-pixels = "1400x900";
       };
       cursor = {
-        color = "1A1826 D9E0EE";  # Catppuccin
+        color = "1A1826 D9E0EE"; # Catppuccin
         blink = false;
         style = "block";
         beam-thickness = "2";
@@ -40,7 +42,7 @@
         bright5 = "f5c2e7"; # pink
         bright6 = "94e2d5"; # teal
         bright7 = "a6adc8"; # Subtext 0
-      }; 
+      };
       tweak = {
         font-monospace-warn = "no";
         sixel = "yes";

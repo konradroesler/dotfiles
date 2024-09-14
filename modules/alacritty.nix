@@ -1,9 +1,6 @@
-{ pkgs, ... }:
-
-let
+{pkgs, ...}: let
   font = "JetBrainsMono Nerf Font";
-in
-{
+in {
   programs.alacritty = {
     enable = true;
     settings = {
@@ -20,9 +17,9 @@ in
       scrolling.history = 10000;
 
       font = {
-      # normal.family = font;
-      # bold.family = font;
-      # italic.family = font;
+        # normal.family = font;
+        # bold.family = font;
+        # italic.family = font;
         size = 18;
       };
     };

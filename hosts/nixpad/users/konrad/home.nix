@@ -1,6 +1,9 @@
-{ lib, username, homeDirectory, ... }:
-
 {
+  lib,
+  username,
+  homeDirectory,
+  ...
+}: {
   imports = [
     # ./../../../../modules/alacritty.nix
     ./../../../../modules/foot.nix
@@ -15,8 +18,8 @@
   home.homeDirectory = lib.mkForce homeDirectory;
   home.stateVersion = "24.05";
 
-	# Let home manager install and manage itself
-	programs.home-manager.enable = true;
+  # Let home manager install and manage itself
+  programs.home-manager.enable = true;
 
   # Set default applications
   home.sessionVariables = {

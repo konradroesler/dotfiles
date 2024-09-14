@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   imports = [
     ./boot.nix
     ./fonts.nix

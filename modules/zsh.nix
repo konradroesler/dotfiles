@@ -1,7 +1,9 @@
-{ lib, config, pkgs, ... }:
-
 {
-
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     # ./oh-my-zsh.nix
   ];
@@ -11,7 +13,7 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    
+
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";

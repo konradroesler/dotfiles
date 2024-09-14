@@ -1,16 +1,14 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
-		enable = true;
-		xwayland.enable = true;
-		systemd.enable = true;
-	};
+    enable = true;
+    xwayland.enable = true;
+    systemd.enable = true;
+  };
 
-	home.packages = with pkgs; [
-		swww
-		wayland
-	];
+  home.packages = with pkgs; [
+    swww
+    wayland
+  ];
 
   home.pointerCursor = {
     gtk.enable = true;
@@ -19,7 +17,7 @@
     size = 16;
   };
 
-	/*
+  /*
   gtk = {
     enable = true;
 
@@ -38,5 +36,5 @@
       size = 14;
     };
   };
-	*/
+  */
 }

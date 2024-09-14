@@ -1,7 +1,7 @@
 {
-	imports = [
-		./settings.nix
-		./style.nix
-		./waybar.nix
-	];
+  imports = [
+    ./settings.nix
+    ./style.nix
+    ./waybar.nix
+  ];
 }

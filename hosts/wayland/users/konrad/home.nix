@@ -1,6 +1,9 @@
-{ lib, username, homeDirectory, ... }:
-
 {
+  lib,
+  username,
+  homeDirectory,
+  ...
+}: {
   imports = lib.forEach [
     /foot.nix
     /git.nix
@@ -10,8 +13,8 @@
     /hyprland
     /kitty.nix
     /neovim
-		/waybar
-		/rofi
+    /waybar
+    /rofi
   ] (x: ./. + "/../../../../modules" + x);
 
   home.username = username;

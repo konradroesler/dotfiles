@@ -1,56 +1,60 @@
 {
   description = "Konrad's flake";
 
-  inputs = { 
+  inputs = {
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-24.05";
-		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-			url = "github:nix-community/home-manager/release-24.05";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+      url = "github:nix-community/home-manager/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-		alejandra = {
-			url = "github:kamadorueda/alejandra/3.0.0";
-			inputs.nixpkgs.follows = "nixpkgs"; 
-		};
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Hyprland (this flake seems to have some problem)
-		/*
-		hyprland = {
-			type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
-      submodules = true;
-    };
-		*/
+    /*
+    hyprland = {
+    	type = "git";
+        url = "https://github.com/hyprwm/Hyprland";
+        submodules = true;
+      };
+    */
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... } @ inputs:
-    let 
-      inherit (nixpkgs.lib) nixosSystem;
-			
-      createNixosConfiguration = 
-      {
-        system,
-        username,
-        homeDirectory,
-        hostname ? null,
-        modules ? [ ],
-        includeHomeManager ? true,
-      }:
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nixpkgs-unstable,
+    ...
+  } @ inputs: let
+    inherit (nixpkgs.lib) nixosSystem;
+
+    createNixosConfiguration = {
+      system,
+      username,
+      homeDirectory,
+      hostname ? null,
+      modules ? [],
+      includeHomeManager ? true,
+    }:
       nixosSystem {
         inherit system;
         specialArgs = {
           inherit inputs system username homeDirectory hostname;
         };
         modules =
-        [
-          ./hosts/${hostname}/configuration.nix
-          { networking.hostName = hostname; }
-        ]
-        ++ (
-          if includeHomeManager then
-            [
+          [
+            ./hosts/${hostname}/configuration.nix
+            {networking.hostName = hostname;}
+          ]
+          ++ (
+            if includeHomeManager
+            then [
               home-manager.nixosModules.home-manager
               {
                 home-manager = {
@@ -58,27 +62,25 @@
                   useGlobalPkgs = false;
                   extraSpecialArgs = {
                     inherit inputs;
-										pkgs-unstable = import nixpkgs-unstable {
-											inherit system;
-											config.allowUnfree = true;
-										};
+                    pkgs-unstable = import nixpkgs-unstable {
+                      inherit system;
+                      config.allowUnfree = true;
+                    };
                   };
                   users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
                     inputs = inputs;
-                    lib = nixpkgs.lib;  # not sure if this is elegant
+                    lib = nixpkgs.lib; # not sure if this is elegant
                     inherit username homeDirectory;
                   };
                   backupFileExtension = "backup";
                 };
               }
             ]
-          else
-            [ ]
-        )
-        ++ modules;
+            else []
+          )
+          ++ modules;
       };
-    in
-    {
+  in {
     nixosConfigurations = {
       nixpad = createNixosConfiguration {
         system = "x86_64-linux";
