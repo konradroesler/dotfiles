@@ -6,7 +6,7 @@
       "hash dbus-update-activation-environment 2>/dev/null &"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
       "wl-clip-persist --clipboard both"
-      "swww-daemon && swww img /home/konrad/.dotfiles/wallpapers/wall1.png"
+      "swww-daemon && swww img /home/konrad/.dotfiles/wallpapers/wall2.jpg"
 
       "hyprctl setcursor Bibata-Modern-Ice 24 &"
 			# "poweralertd &"
