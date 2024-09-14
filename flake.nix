@@ -68,7 +68,7 @@
                   extraSpecialArgs = {
                     inherit inputs pkgs-unstable;
                   };
-                  users."${username}" = import ./hosts/${hostname}/users/${username}/home.nix {
+                  users."${username}" = import ./hosts/${hostname}/home.nix {
                     inputs = inputs;
                     lib = nixpkgs.lib; # not sure if this is elegant
                     inherit username homeDirectory;

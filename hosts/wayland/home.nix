@@ -5,6 +5,7 @@
   ...
 }: {
   imports = lib.forEach [
+		/fastfetch.nix
     /firefox.nix
     /foot.nix
     /git.nix
@@ -17,7 +18,7 @@
     /swaync
     /waybar
     /zsh.nix
-  ] (x: ./. + "/../../../../modules" + x);
+  ] (x: ./. + "/../../modules" + x);
 
   home.username = username;
   home.homeDirectory = lib.mkForce homeDirectory;
