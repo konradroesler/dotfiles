@@ -5,10 +5,14 @@
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-24.05";
 		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Home Manager
     home-manager = {
 			url = "github:nix-community/home-manager/release-24.05";
 			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
+		alejandra = {
+			url = "github:kamadorueda/alejandra/3.0.0";
+			inputs.nixpkgs.follows = "nixpkgs"; 
 		};
 
     # Hyprland (this flake seems to have some problem)
@@ -25,7 +29,6 @@
     let 
       inherit (nixpkgs.lib) nixosSystem;
 			
-      # Create NixOs configuration with specified hostname and username
       createNixosConfiguration = 
       {
         system,
@@ -38,7 +41,7 @@
       nixosSystem {
         inherit system;
         specialArgs = {
-          inherit inputs username homeDirectory hostname;
+          inherit inputs system username homeDirectory hostname;
         };
         modules =
         [
@@ -55,7 +58,6 @@
                   useGlobalPkgs = false;
                   extraSpecialArgs = {
                     inherit inputs;
-										# For neovim 0.10
 										pkgs-unstable = import nixpkgs-unstable {
 											inherit system;
 											config.allowUnfree = true;

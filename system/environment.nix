@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, system, pkgs, ... }:
 
 {
 	environment.systemPackages = with pkgs; [
@@ -7,5 +7,6 @@
 		tree
 	  # Copy paste in neovim
 		wl-clipboard
+		inputs.alejandra.defaultPackage.${system}
 	];
 }
