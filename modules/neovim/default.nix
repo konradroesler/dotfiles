@@ -42,7 +42,7 @@ in {
     recursive = true;
   };
 
-  home.file."./.conifg/nvim/lua/konrad/init.lua".text = ''
+  home.file."./.config/nvim/lua/konrad/init.lua".text = ''
     require("konrad.set")
     require("konrad.remap")
     vim.opt.runtimepath:append("${treesitter-parsers}")

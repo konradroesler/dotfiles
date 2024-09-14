@@ -5,16 +5,17 @@
   ...
 }: {
   imports = lib.forEach [
+    /firefox.nix
     /foot.nix
     /git.nix
-    /starship.nix
-    /zsh.nix
-    /firefox.nix
     /hyprland
     /kitty.nix
     /neovim
-    /waybar
     /rofi
+    /starship.nix
+		/swaync
+    /waybar
+    /zsh.nix
   ] (x: ./. + "/../../../../modules" + x);
 
   home.username = username;

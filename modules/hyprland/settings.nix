@@ -9,9 +9,9 @@
       "swww-daemon ; sleep 1 && swww img /home/konrad/.dotfiles/wallpapers/wall2.jpg"
 
       "hyprctl setcursor Bibata-Modern-Classic 18 &"
-      # "poweralertd &"
+      "poweralertd &"
       "waybar &"
-      # "swaync &"
+      "swaync &"
       "wl-paste --watch cliphist store &"
       "hyprlock"
 
