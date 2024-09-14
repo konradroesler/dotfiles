@@ -27,8 +27,8 @@ in {
     margin-left = 0;
     margin-right = 0;
     modules-left = [
-      # "custom/launcher"
-      # "hyprland/workspaces"
+			# "custom/launcher"
+      "hyprland/workspaces"
       "tray"
     ];
     modules-center = [
@@ -125,13 +125,11 @@ in {
       tooltip = true;
       tooltip-format = "{time}";
     };
-    /*
-     "custom/launcher"= {
-    format= "";
-    on-click= "rofi -show drun";
-    on-click-right= "wallpaper-picker";
-    tooltip= "false";
-     };
-    */
+    "custom/launcher"= {
+			format= "";
+			on-click= "rofi -show drun";
+			on-click-right= "wallpaper-picker";
+			tooltip= "false";
+    };
   };
 }
