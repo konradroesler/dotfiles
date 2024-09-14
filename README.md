@@ -2,6 +2,8 @@ My personal dotfiles for all systems, configured using Nix and Home Manager.
 
 ## Screenshots
 
+<img src="https://github.com/konradroesler/dotfiles/blob/main/screenshots/screen_nvim.png" width="800">
+
 I'm still figuring this out so theres no guarantee the flakes will actually build :)
 
 ## To-Do
@@ -25,3 +27,9 @@ rm hosts/<hostname>/hardware-configuration.nix
 cp /etc/nixos/hardware-configuration.nix hosts/<hostname>/
 sudo nixos-rebuild switch --flake .#<hostname>
 ```
+
+## Sources
+
+A lot of this repository was originally taken from other great NixOs configurations, a few of them are:
+
+[ryan4yin](https://github.com/ryan4yin/nix-config), [Frost-Phoenix](https://github.com/Frost-Phoenix/nixos-config), [redyf](https://github.com/redyf/nixdots), [gpskwlkr](https://github.com/gpskwlkr/nixos-hyprland-flake)
