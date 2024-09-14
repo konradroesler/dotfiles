@@ -5,20 +5,19 @@
       "systemctl --user import-environment &"
       "hash dbus-update-activation-environment 2>/dev/null &"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-      # "wl-clip-persist --clipboard both"
-      "swww-daemon"
-      "swww img /home/konrad/.dotfiles/wallpapers/wall1.png"
+      "wl-clip-persist --clipboard both"
+      "swww-daemon && swww img /home/konrad/.dotfiles/wallpapers/wall1.png"
 
-      # "hyprctl setcursor Bibata-Modern-Ice 24 &"
-      # "poweralertd &"
+      "hyprctl setcursor Bibata-Modern-Ice 24 &"
+			# "poweralertd &"
       "waybar &"
       # "swaync &"
-      # "wl-paste --watch cliphist store &"
-      # "hyprlock"
+      "wl-paste --watch cliphist store &"
+      "hyprlock"
 
       # App auto start
       "[workspace 1 silent] foot"
-      "[workspace 2 silent] firefox"
+			"[workspace 2 silent] firefox"
     ];
 
     input = {
