@@ -41,13 +41,12 @@
       hostname ? null,
       modules ? [],
       includeHomeManager ? true,
-    }:
-		let
-			pkgs-unstable = import nixpkgs-unstable {
-				inherit system;
-				config.allowUnfree = true;
-			};
-		in
+    }: let
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
       nixosSystem {
         inherit system;
         specialArgs = {

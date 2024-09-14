@@ -8,13 +8,13 @@
     /firefox.nix
     /foot.nix
     /git.nix
-		/home.nix
+    /home.nix
     /hyprland
     /kitty.nix
     /neovim
     /rofi
     /starship.nix
-		/swaync
+    /swaync
     /waybar
     /zsh.nix
   ] (x: ./. + "/../../../../modules" + x);

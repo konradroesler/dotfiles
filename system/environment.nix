@@ -2,19 +2,21 @@
   inputs,
   system,
   pkgs,
-	pkgs-unstable,
+  pkgs-unstable,
   ...
 }: {
-  environment.systemPackages = (with pkgs; [
-    git
-    vim
-    tree
-    hyprpicker
-		bibata-cursors
-    # Copy paste in neovim
-    wl-clipboard
-    inputs.alejandra.defaultPackage.${system}
-  ]) ++ (with pkgs-unstable; [
-			hyprshot
-		]);
+  environment.systemPackages =
+    (with pkgs; [
+      git
+      vim
+      tree
+      hyprpicker
+      bibata-cursors
+      # Copy paste in neovim
+      wl-clipboard
+      inputs.alejandra.defaultPackage.${system}
+    ])
+    ++ (with pkgs-unstable; [
+      hyprshot
+    ]);
 }

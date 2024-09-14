@@ -1,5 +1,5 @@
 {
-	home.sessionVariables = {
-		XDG_PICTURES_DIR = "$HOME/Pictures";
-	};
+  home.sessionVariables = {
+    XDG_PICTURES_DIR = "$HOME/Pictures";
+  };
 }

@@ -41,7 +41,7 @@ in {
       "pulseaudio"
       "network"
       "battery"
-			"custom/notification"
+      "custom/notification"
     ];
     clock = {
       calendar = {
@@ -132,25 +132,25 @@ in {
       on-click-right = "wallpaper-picker";
       tooltip = "false";
     };
-		"custom/notification" = {
-        tooltip = false;
-        format = "{icon} ";
-        format-icons = {
-            notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
-            none = "  <span foreground='${red}'></span>";
-            dnd-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
-            dnd-none = "  <span foreground='${red}'></span>";
-            inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
-            inhibited-none = "  <span foreground='${red}'></span>";
-            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
-            dnd-inhibited-none = "  <span foreground='${red}'></span>";
-        };
-        return-type = "json";
-        exec-if = "which swaync-client";
-        exec = "swaync-client -swb";
-        on-click = "swaync-client -t -sw";
-        on-click-right = "swaync-client -d -sw";
-        escape = true;
+    "custom/notification" = {
+      tooltip = false;
+      format = "{icon} ";
+      format-icons = {
+        notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        none = "  <span foreground='${red}'></span>";
+        dnd-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        dnd-none = "  <span foreground='${red}'></span>";
+        inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        inhibited-none = "  <span foreground='${red}'></span>";
+        dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        dnd-inhibited-none = "  <span foreground='${red}'></span>";
+      };
+      return-type = "json";
+      exec-if = "which swaync-client";
+      exec = "swaync-client -swb";
+      on-click = "swaync-client -t -sw";
+      on-click-right = "swaync-client -d -sw";
+      escape = true;
     };
   };
 }
