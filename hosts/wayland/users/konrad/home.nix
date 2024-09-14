@@ -8,6 +8,7 @@
     /firefox.nix
     /foot.nix
     /git.nix
+		/home.nix
     /hyprland
     /kitty.nix
     /neovim
