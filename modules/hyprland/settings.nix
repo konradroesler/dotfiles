@@ -82,8 +82,8 @@
 
       blur = {
         enabled = true;
-        size = 2;
-        passes = 2;
+        size = 1;
+        passes = 1;
         # size = 4;
         # passes = 2;
         brightness = 1;
