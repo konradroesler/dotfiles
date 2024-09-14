@@ -8,8 +8,8 @@
       "wl-clip-persist --clipboard both"
       "swww-daemon ; sleep 1 && swww img /home/konrad/.dotfiles/wallpapers/wall2.jpg"
 
-      "hyprctl setcursor Bibata-Modern-Ice 24 &"
-			# "poweralertd &"
+      "hyprctl setcursor Bibata-Modern-Classic 18 &"
+      # "poweralertd &"
       "waybar &"
       # "swaync &"
       "wl-paste --watch cliphist store &"
@@ -17,16 +17,17 @@
 
       # App auto start
       "[workspace 1 silent] foot"
-			"[workspace 2 silent] firefox"
+      "[workspace 2 silent] firefox"
     ];
 
     input = {
       kb_layout = "us";
-      kb_options = "grp:alt_caps_toggle";
       numlock_by_default = true;
-      follow_mouse = 0;
+      repeat_rate = 25;
+      repeat_delay = 300;
+      follow_mouse = 1;
       float_switch_override_focus = 0;
-      mouse_refocus = 0;
+      mouse_refocus = 1;
       sensitivity = 0;
       touchpad = {
         natural_scroll = true;
@@ -38,8 +39,8 @@
       layout = "dwindle";
       gaps_in = 5;
       gaps_out = 20;
-      border_size = 0;
-      "col.active_border" = "rgb(98971a) rgb(cc241d) 45deg";
+      border_size = 1;
+      "col.active_border" = "rgb(549399)";
       "col.inactive_border" = "0x00000000";
       border_part_of_window = false;
       no_border_on_floating = false;
@@ -50,7 +51,7 @@
       disable_hyprland_logo = true;
       always_follow_on_dnd = true;
       layers_hog_keyboard_focus = true;
-      animate_manual_resizes = false;
+      animate_manual_resizes = true;
       enable_swallow = true;
       focus_on_activate = true;
       new_window_takes_over_fullscreen = 2;
@@ -75,9 +76,9 @@
 
     decoration = {
       rounding = 10;
-      # active_opacity = 0.90;
-      # inactive_opacity = 0.90;
-      # fullscreen_opacity = 1.0;
+      active_opacity = 0.85;
+      inactive_opacity = 0.85;
+      fullscreen_opacity = 1.0;
 
       blur = {
         enabled = true;
