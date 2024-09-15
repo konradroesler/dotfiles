@@ -1,7 +1,6 @@
-{ pkgs, ... }:
-{
-  home.packages = (with pkgs; [ fastfetch ]);
-  
+{pkgs, ...}: {
+  home.packages = with pkgs; [fastfetch];
+
   xdg.configFile."fastfetch/config.jsonc".text = ''
     {
       "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
@@ -152,19 +151,19 @@
     }
   '';
 }
-
 /*
-      "display": {
-        "separator": "",
-        "size": {
-            "binaryPrefix": "si",
-          "ndigits": 0
-        },
-        "percent": {
-          "type": 1
-        },
-        "key":{
-         "Width": 1
-         },
-      },
+"display": {
+  "separator": "",
+  "size": {
+      "binaryPrefix": "si",
+    "ndigits": 0
+  },
+  "percent": {
+    "type": 1
+  },
+  "key":{
+   "Width": 1
+   },
+},
 */
+

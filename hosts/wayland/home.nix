@@ -5,7 +5,7 @@
   ...
 }: {
   imports = lib.forEach [
-		/fastfetch.nix
+    /fastfetch.nix
     /firefox.nix
     /foot.nix
     /git.nix
