@@ -2,7 +2,7 @@ My personal dotfiles for all systems, configured using Nix and Home Manager.
 
 ## Screenshots
 
-<img src="https://github.com/konradroesler/dotfiles/blob/main/screenshots/screen_nvim.png" width="800">
+<img src="https://github.com/konradroesler/dotfiles/blob/main/assets/screenshots/screen_nvim.png" width="800">
 
 I'm still figuring this out so theres no guarantee the flakes will actually build :)
 
