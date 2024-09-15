@@ -32,4 +32,4 @@ sudo nixos-rebuild switch --flake .#<hostname>
 
 A lot of this repository was originally taken from other great NixOs configurations, a few of them are:
 
-[ryan4yin](https://github.com/ryan4yin/nix-config), [Frost-Phoenix](https://github.com/Frost-Phoenix/nixos-config), [redyf](https://github.com/redyf/nixdots), [gpskwlkr](https://github.com/gpskwlkr/nixos-hyprland-flake)
+[ryan4yin](https://github.com/ryan4yin/nix-config), [Frost-Phoenix](https://github.com/Frost-Phoenix/nixos-config), [redyf](https://github.com/redyf/nixdots), [gpskwlkr](https://github.com/gpskwlkr/nixos-hyprland-flake), [tesseract](https://gitlab.com/scientiac/tesseract.home.manager/-/tree/main)
