@@ -16,6 +16,7 @@
     /rofi
     /starship.nix
     /swaync
+		/tmux.nix
     /waybar
     /zsh.nix
   ] (x: ./. + "/../../modules" + x);
@@ -27,7 +28,7 @@
   # Let home manager install and manage itself
   programs.home-manager.enable = true;
 
-  Set default applications
+  # Set default applications
   home.sessionVariables = {
     BROWSER = "firefox";
     EDITOR = "nvim";

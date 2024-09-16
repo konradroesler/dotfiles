@@ -16,9 +16,15 @@
       "hyprlock"
 
       # App auto start
-      "[workspace 1 silent] foot"
-      "[workspace 2 silent] firefox"
+      "[workspace 2 silent] foot"
+      "[workspace 1 silent] firefox"
     ];
+
+		monitor = [
+			"eDP-1,1920x1200,auto,1"
+			"HDMI-A-1,1920x1080,1080x0,1"
+			"HDMI-A-1,transform,3"
+		];
 
     input = {
       kb_layout = "us";
@@ -273,14 +279,11 @@
       "pin, title:^(Picture-in-Picture)$"
       "opacity 1.0 override 1.0 override, title:^(.*imv.*)$"
       "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
-      "opacity 1.0 override 1.0 override, class:(Aseprite)"
       "opacity 1.0 override 1.0 override, class:(Unity)"
       "opacity 1.0 override 1.0 override, class:(firefox)"
       "opacity 1.0 override 1.0 override, class:(evince)"
-      "workspace 1, class:^(firefox)$"
       "workspace 4, class:^(discord)$"
       "workspace 4, class:^(Gimp-2.10)$"
-      "workspace 4, class:^(Aseprite)$"
       "workspace 5, class:^(Audacious)$"
       "workspace 5, class:^(Spotify)$"
       "idleinhibit focus, class:^(mpv)$"
@@ -317,8 +320,6 @@
   };
 
   wayland.windowManager.hyprland.extraConfig = "
-		monitor=,preferred,auto,auto
-
 		xwayland {
 			force_zero_scaling = false
 		}
