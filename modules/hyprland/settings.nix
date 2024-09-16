@@ -6,7 +6,7 @@
       "hash dbus-update-activation-environment 2>/dev/null &"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
       "wl-clip-persist --clipboard both"
-      "swww-daemon ; sleep 1 && swww img /home/konrad/.dotfiles/assets/wallpapers/wall2.jpg"
+      "swww-daemon ; sleep 1 && swww img /home/konrad/.dotfiles/assets/wallpapers/wall2.jpg && swww img /home/konrad/.dotfiles/assets/wallpapers/wall3.jpg"
 
       "hyprctl setcursor Bibata-Modern-Classic 18 &"
       "poweralertd &"
@@ -16,15 +16,22 @@
       "hyprlock"
 
       # App auto start
-      "[workspace 2 silent] foot"
-      "[workspace 1 silent] firefox"
+      "[workspace 1 silent] foot"
+      "[workspace 2 silent] firefox"
     ];
 
 		monitor = [
 			",preffered,auto,auto"
 			"eDP-1,1920x1200,auto,1"
-			"HDMI-A-1,1920x1080,1080x0,1"
+			"HDMI-A-1,1920x1080,auto,1"
 			"HDMI-A-1,transform,3"
+		];
+
+		workspace = [
+			"1,monitor:DP-1"
+			"2,monitor:DP-1"
+			"3,monitor:DP-1"
+			"4,monitor:HMDI-A-1"
 		];
 
     input = {
