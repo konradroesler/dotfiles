@@ -27,10 +27,10 @@
   # Let home manager install and manage itself
   programs.home-manager.enable = true;
 
-  # Set default applications
-  # home.sessionVariables = {
-  #   BROWSER = "firefox";
-  #   EDITOR = "nvim";
-  #   TERMINAL = "foot";
-  # };
+  Set default applications
+  home.sessionVariables = {
+    BROWSER = "firefox";
+    EDITOR = "nvim";
+    TERMINAL = "foot";
+  };
 }
