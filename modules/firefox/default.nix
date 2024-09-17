@@ -45,7 +45,6 @@
           sidebery
           sponsorblock
           i-dont-care-about-cookies
-          adaptive-tab-bar-colour
           (youtube-recommended-videos.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
           (languagetool.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
         ];
