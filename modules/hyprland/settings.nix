@@ -90,8 +90,8 @@
 
     decoration = {
       rounding = 10;
-      active_opacity = 0.85;
-      inactive_opacity = 0.85;
+      active_opacity = 0.9;
+      inactive_opacity = 0.9;
       fullscreen_opacity = 1.0;
 
       blur = {
