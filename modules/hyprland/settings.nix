@@ -22,7 +22,7 @@
 
 		monitor = [
 			",preffered,auto,auto"
-			"eDP-1,1920x1200,auto,1"
+			"eDP-1,1920x1200,auto,1.5"
 			"HDMI-A-1,1920x1080,auto,1"
 			"HDMI-A-1,transform,3"
 		];
