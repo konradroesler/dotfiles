@@ -8,6 +8,7 @@
     /fastfetch.nix
     /firefox
     /foot.nix
+		/openfortivpn
     /git.nix
     /home.nix
     /hyprland
