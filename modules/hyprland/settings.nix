@@ -20,19 +20,19 @@
       "[workspace 2 silent] firefox"
     ];
 
-		monitor = [
-			",preffered,auto,auto"
-			"eDP-1,1920x1200,auto,1.5"
-			"HDMI-A-1,1920x1080,auto,1"
-			"HDMI-A-1,transform,3"
-		];
+    monitor = [
+      ",preffered,auto,auto"
+      "eDP-1,1920x1200,auto,1.5"
+      "HDMI-A-1,1920x1080,auto,1"
+      "HDMI-A-1,transform,3"
+    ];
 
-		workspace = [
-			"1,monitor:DP-1"
-			"2,monitor:DP-1"
-			"3,monitor:DP-1"
-			"4,monitor:HMDI-A-1"
-		];
+    workspace = [
+      "1,monitor:DP-1"
+      "2,monitor:DP-1"
+      "3,monitor:DP-1"
+      "4,monitor:HMDI-A-1"
+    ];
 
     input = {
       kb_layout = "us";

@@ -38,7 +38,7 @@
         isDefault = true;
 
         extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
-					darkreader
+          darkreader
           ublock-origin
           bitwarden
           vimium

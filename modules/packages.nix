@@ -3,6 +3,6 @@
     wl-clipboard
     cliphist # clip board manager
     poweralertd # power notifications
-		p7zip
+    p7zip
   ];
 }

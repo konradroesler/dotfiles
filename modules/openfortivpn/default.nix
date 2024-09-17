@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
-{
-	home.packages = with pkgs; [openfortivpn];
+{pkgs, ...}: {
+  home.packages = with pkgs; [openfortivpn];
 }

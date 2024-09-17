@@ -8,7 +8,7 @@
     /fastfetch.nix
     /firefox
     /foot.nix
-		/openfortivpn
+    /openfortivpn
     /git.nix
     /home.nix
     /hyprland
@@ -17,7 +17,7 @@
     /rofi
     /starship.nix
     /swaync
-		/tmux.nix
+    /tmux.nix
     /waybar
     /zsh.nix
   ] (x: ./. + "/../../modules" + x);
