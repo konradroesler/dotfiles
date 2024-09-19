@@ -32,7 +32,7 @@ vim.opt.isfname:append("@-@")
 -- Frequency at which certain events are triggered
 vim.opt.updatetime = 750
 -- Highlight 80th column
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
 -- Best mapleader
 vim.g.mapleader = " "
 -- Automatic save on buffer switch and other

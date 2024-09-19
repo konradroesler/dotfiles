@@ -22,7 +22,9 @@ in {
     # needed for treesitter
     clang-tools
     clang
-    # lua-lanuage-server
+		# install languages servers
+    lua-language-server
+		typst-lsp
   ];
 
   programs.neovim = {
