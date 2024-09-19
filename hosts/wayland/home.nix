@@ -19,6 +19,7 @@
     /swaync
     /tmux.nix
     /waybar
+		/zathura
     /zsh.nix
   ] (x: ./. + "/../../modules" + x);
 

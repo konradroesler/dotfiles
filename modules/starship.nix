@@ -10,7 +10,7 @@
       add_newline = false;
       format = "$shlvl$shell$user$name$hostname$nix_shell$git_branch$git_commit$git_state$direcory$jobs$cmd_duration$character";
       shlvl = {
-        disabled = false;
+        disabled = true;
         style = "bright-red bold";
       };
       shell = {
