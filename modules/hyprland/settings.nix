@@ -290,6 +290,7 @@
       "opacity 1.0 override 1.0 override, class:(Unity)"
       "opacity 1.0 override 1.0 override, class:(firefox)"
       "opacity 1.0 override 1.0 override, class:(evince)"
+      "opacity 1.0 override 1.0 override, class:(transcribe)"
       "workspace 4, class:^(discord)$"
       "workspace 4, class:^(Gimp-2.10)$"
       "workspace 5, class:^(Audacious)$"

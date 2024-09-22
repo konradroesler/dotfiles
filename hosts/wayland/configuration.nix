@@ -39,4 +39,6 @@
     shell = pkgs.zsh;
     extraGroups = ["networkmanager" "wheel"];
   };
+
+	nixpkgs.config.allowUnfree = true;
 }

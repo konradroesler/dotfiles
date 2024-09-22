@@ -18,7 +18,9 @@
     /starship.nix
     /swaync
     /tmux.nix
+		/transcribe.nix
     /waybar
+		/yt-dlp.nix
 		/zathura
     /zsh.nix
   ] (x: ./. + "/../../modules" + x);
