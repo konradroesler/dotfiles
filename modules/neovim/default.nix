@@ -25,6 +25,7 @@ in {
 		# install languages servers
     lua-language-server
 		typst-lsp
+		pyright
   ];
 
   programs.neovim = {
