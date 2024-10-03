@@ -17,6 +17,7 @@
     /rofi
     /starship.nix
     /swaync
+		/thunderbird.nix
     /tmux.nix
 		/transcribe.nix
     /waybar

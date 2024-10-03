@@ -6,7 +6,7 @@ in {
     # BACKGROUND
     background {
       monitor =
-      path = ${../../assets/wallpapers/wall2.jpg}
+      path = ${../../assets/wallpapers/wall5.png}
       blur_passes = 1
       contrast = 0.8916
       brightness = 0.8172
