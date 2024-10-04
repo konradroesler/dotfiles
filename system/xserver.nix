@@ -8,6 +8,7 @@
     xserver = {
       enable = true;
       xkb.layout = "us";
+      xkb.variant = "alt-intl";
       videoDrivers = ["amdgpu"];
       displayManager.gdm.enable = true;
       # displayManager.gdm.wayland = true;
