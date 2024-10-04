@@ -8,8 +8,7 @@
     xserver = {
       enable = true;
       xkb.layout = "us";
-      xkb.variant = "alt-intl";
-      videoDrivers = ["amdgpu"];
+      xkb.variant = "altgr-intl";
       displayManager.gdm.enable = true;
       # displayManager.gdm.wayland = true;
     };
