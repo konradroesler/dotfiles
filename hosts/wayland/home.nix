@@ -5,7 +5,6 @@
   ...
 }: {
   imports = lib.forEach [
-		/discord.nix
     /fastfetch.nix
     /firefox
     /foot.nix
@@ -20,7 +19,6 @@
     /rofi
     /starship.nix
     /swaync
-		/thunderbird.nix
     /tmux.nix
 		/transcribe.nix
     /waybar

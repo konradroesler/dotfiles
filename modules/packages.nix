@@ -5,5 +5,7 @@
     poweralertd # power notifications
     p7zip
 		inkscape-with-extensions
+		discord
+		thunderbird
   ];
 }
