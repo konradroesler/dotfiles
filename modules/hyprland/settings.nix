@@ -91,8 +91,8 @@
 
     decoration = {
       rounding = 10;
-      active_opacity = 0.9;
-      inactive_opacity = 0.9;
+      active_opacity = 1;
+      inactive_opacity = 1;
       fullscreen_opacity = 1.0;
 
       blur = {
@@ -288,10 +288,7 @@
       "pin, title:^(Picture-in-Picture)$"
       "opacity 1.0 override 1.0 override, title:^(.*imv.*)$"
       "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
-      "opacity 1.0 override 1.0 override, class:(Unity)"
-      "opacity 1.0 override 1.0 override, class:(firefox)"
-      "opacity 1.0 override 1.0 override, class:(evince)"
-      "opacity 1.0 override 1.0 override, class:(transcribe)"
+      "opacity 0.95 override 0.95 override, class:(foot)"
       "workspace 4, class:^(discord)$"
       "workspace 4, class:^(Gimp-2.10)$"
       "workspace 5, class:^(Audacious)$"
