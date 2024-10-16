@@ -9,6 +9,7 @@
     (with pkgs; [
       git
       vim
+			vlc
       tree
       hyprpicker
       bibata-cursors

@@ -5,6 +5,7 @@
   ...
 }: {
   imports = lib.forEach [
+		/discord.nix
     /fastfetch.nix
     /firefox
     /foot.nix
@@ -14,6 +15,7 @@
     /hyprland
     /kitty.nix
     /neovim
+		/obs-studio.nix
     /rofi
     /starship.nix
     /swaync
