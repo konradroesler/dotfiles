@@ -16,6 +16,7 @@
     /kitty.nix
     /neovim
 		/obs-studio.nix
+		/packages.nix
     /rofi
     /starship.nix
     /swaync
