@@ -88,42 +88,42 @@
           "browser.urlbar.suggest.topsites" = false;
           "browser.newtabpage.pinned" = [
             {
-              title = "youtube";
-              url = "https://www.youtube.com/";
-            }
-            {
-              title = "scientiac";
-              url = "https://scientiac.space/";
-            }
-            {
-              title = "messenger";
-              url = "https://www.messenger.com/";
-            }
-            {
-              title = "search.nixos";
-              url = "https://search.nixos.org/";
-            }
-            {
-              title = "fosstodon";
-              url = "https://fosstodon.org/";
-            }
-            {
-              title = "gitlab";
-              url = "http://www.gitlab.com/";
+              title = "konrad";
+              url = "https://konradroesler.com/";
             }
             {
               title = "github";
               url = "https://www.github.com/";
             }
             {
+              title = "wikipedia";
+              url = "https://www.wikipedia.de/";
+            }
+            {
               title = "chatgpt";
               url = "https://chatgpt.com/";
+            }
+            {
+              title = "nixpkgs";
+              url = "https://search.nixos.org/";
+            }
+            {
+              title = "spotify";
+              url = "https://open.spotify.com/";
+            }
+            {
+              title = "moodle";
+              url = "https://moodle.hu-berlin.de/";
+            }
+            {
+              title = "agnes";
+              url = "https://agnes.hu-berlin.de/";
             }
           ];
         };
 
-        userChrome = builtins.readFile ./userChrome.css;
-        userContent = builtins.readFile ./userContent.css;
+				userChrome = builtins.readFile ./userChrome.css;
+				userContent = builtins.readFile ./userContent.css;
       };
     };
   };
