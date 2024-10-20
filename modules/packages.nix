@@ -7,5 +7,10 @@
 		inkscape-with-extensions
 		discord
 		thunderbird
+		obs-studio
+		transcribe
+		yt-dlp
   ];
+
+	nixpkgs.config.allowUnfree = true;
 }

@@ -147,6 +147,8 @@
     };
 
     bind = [
+			# switch current course
+			"ALT, S, exec, python ~/repos/lecture-notes/scripts/rofi-courses.py"
       # show keybinds list
       "$mainMod, F1, exec, show-keybinds"
 
@@ -173,12 +175,12 @@
       "$mainMod, N, exec, swaync-client -t -sw"
       "$mainMod SHIFT, W, exec, vm-start"
 
+      # screenshot area
+      ", PRINT, exec, hyprshot -m region --clipboard-only"
       # screenshot a window
       "$mainMod, PRINT, exec, hyprshot -m window --clipboard-only"
       # screenshot a monitor
-      ", PRINT, exec, hyprshot -m active --mode output"
-      # screenshot area
-      "$mainMod SHIFT, PRINT, exec, hyprshot -m region --clipboard-only"
+      "$mainMod SHIFT, PRINT, exec, hyprshot -m active --mode output"
 
       # switch focus
       "$mainMod, left, movefocus, l"
@@ -230,7 +232,7 @@
       ",XF86AudioPlay,exec, playerctl play-pause"
       ",XF86AudioNext,exec, playerctl next"
       ",XF86AudioPrev,exec, playerctl previous"
-      ",XF86AudioStop, exec, playerctl stop"
+      ",XF86AudioStop,exec, playerctl stop"
 
       "$mainMod, mouse_down, workspace, e-1"
       "$mainMod, mouse_up, workspace, e+1"

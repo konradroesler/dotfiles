@@ -5,26 +5,22 @@
   ...
 }: {
   imports = lib.forEach [
-    /fastfetch.nix
-    /firefox
-    /foot.nix
+    /fastfetch
+		/firefox
+    /foot
     /openfortivpn
-    /git.nix
+    /git
     /home.nix
     /hyprland
-    /kitty.nix
     /neovim
-		/obs-studio.nix
 		/packages.nix
     /rofi
-    /starship.nix
+    /starship
     /swaync
-    /tmux.nix
-		/transcribe.nix
+    /tmux
     /waybar
-		/yt-dlp.nix
 		/zathura
-    /zsh.nix
+    /zsh
   ] (x: ./. + "/../../modules" + x);
 
   home.username = username;
