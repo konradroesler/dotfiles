@@ -12,6 +12,7 @@
     /git
     /home.nix
     /hyprland
+		/languages
     /neovim
 		/packages.nix
     /rofi
