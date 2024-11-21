@@ -164,6 +164,7 @@
       "$mainMod, D, exec, rofi -show drun || pkill rofi"
       "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
       "$mainMod SHIFT, M, exec, hyprctl dispatch exec '[workspace 4 silent] spotify --enable-features=UseOzonePlatform --ozone-platform=wayland'"
+      "$mainMod SHIFT, C, exec, hyprctl dispatch exec '[workspace 3 silent] code --enable-features=UseOzonePlatform --ozone-platform=wayland'"
       "$mainMod, Escape, exec, hyprlock"
       "$mainMod SHIFT, Escape, exec, power-menu"
       "$mainMod, P, pseudo,"
@@ -171,8 +172,6 @@
       "$mainMod, T, exec, toggle_oppacity"
       "$mainMod, E, exec, thunar"
       "$mainMod SHIFT, B, exec, toggle_waybar"
-      "$mainMod, C, exec, hyprpicker -a"
-      "$mainMod, W, exec, wallpaper-picker"
       "$mainMod, N, exec, swaync-client -t -sw"
       "$mainMod SHIFT, W, exec, vm-start"
 

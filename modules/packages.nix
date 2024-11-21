@@ -10,6 +10,7 @@
 		obs-studio
 		transcribe
 		yt-dlp
+		vscode
   ];
 
 	nixpkgs.config.allowUnfree = true;
