@@ -163,6 +163,7 @@
       "$mainMod, Space, resizeactive, exact 950 600"
       "$mainMod, D, exec, rofi -show drun || pkill rofi"
       "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
+      "$mainMod SHIFT, M, exec, hyprctl dispatch exec '[workspace 4 silent] spotify --enable-features=UseOzonePlatform --ozone-platform=wayland'"
       "$mainMod, Escape, exec, hyprlock"
       "$mainMod SHIFT, Escape, exec, power-menu"
       "$mainMod, P, pseudo,"
