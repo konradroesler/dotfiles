@@ -24,7 +24,6 @@ in {
     clang
 		# install languages servers
     lua-language-server
-		typst-lsp
 		pyright
   ];
 

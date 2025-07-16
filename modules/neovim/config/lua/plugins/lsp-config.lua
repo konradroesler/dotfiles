@@ -9,11 +9,6 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.typst_lsp.setup({
-				settings = {
-					exportPdf = "onType", -- Choose onType, onSave or never.
-				},
-			})
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
