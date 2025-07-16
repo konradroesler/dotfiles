@@ -1,4 +1,4 @@
-#/bin/sh
+# /bin/sh
 #
 # Mini script to ensure readable colorscheme in nmtui
 

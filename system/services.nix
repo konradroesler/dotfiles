@@ -7,4 +7,5 @@
   # Brightness control (wayland)
   services.illum.enable = true;
   services.openssh.enable = true;
+	services.blueman.enable = true;
 }

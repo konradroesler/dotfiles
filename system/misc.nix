@@ -10,5 +10,9 @@
     mpd
     # Image viewer
     feh
+		# java 
+		jdk
   ];
+	hardware.bluetooth.enable = true;
+	hardware.bluetooth.powerOnBoot = true;
 }
