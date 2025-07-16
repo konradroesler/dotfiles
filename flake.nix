@@ -2,11 +2,11 @@
   description = "Konrad's flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOs/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOs/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
