@@ -1,10 +1,5 @@
 {pkgs, ...}: {
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
+  fonts.packages = with pkgs.nerd-fonts; [
     fira-code
-    fira-code-symbols
-    (nerdfonts.override {fonts = ["FiraCode"];})
   ];
 }
