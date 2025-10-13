@@ -11,6 +11,7 @@
 		transcribe
 		yt-dlp
 		vscode
+		anki
   ];
 
 	nixpkgs.config.allowUnfree = true;
