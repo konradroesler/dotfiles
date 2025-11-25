@@ -5,6 +5,7 @@ _: {
     ./locale.nix
     ./nix.nix
     ./pipewire.nix
+		./steam.nix
     ./virtualisation.nix
     ./xserver.nix
   ];
