@@ -18,7 +18,6 @@
     /rofi
 		/spicetify
     /starship
-		/steam
     /swaync
     /tmux
     /waybar

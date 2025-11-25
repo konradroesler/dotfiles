@@ -26,6 +26,7 @@
       /programs.nix
       /security.nix
       /services.nix
+			/steam.nix
       /system.nix
       # /virtualisation.nix
       /wayland.nix
