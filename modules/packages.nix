@@ -12,6 +12,8 @@
 		yt-dlp
 		vscode
 		anki
+		texlive.combined.scheme-full
+		swi-prolog
   ];
 
 	nixpkgs.config.allowUnfree = true;
