@@ -14,7 +14,6 @@
 		anki
 		texlive.combined.scheme-full
 		swi-prolog
-		steam
   ];
 
 	nixpkgs.config.allowUnfree = true;
