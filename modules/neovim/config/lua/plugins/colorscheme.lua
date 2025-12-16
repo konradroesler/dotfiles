@@ -6,6 +6,7 @@ return {
 			vim.cmd.colorscheme("kanagawa")
 		end,
 	},
+	--[[
   {
     "navarasu/onedark.nvim",
     priority = 1,
@@ -29,4 +30,5 @@ return {
       })
     end,
   },
+	]]
 }

@@ -21,7 +21,7 @@
         beam-thickness = "2";
         underline-thickness = "2";
       };
-      colors = import ./cattpuccin.nix;
+      colors = import ./kanagawa.nix;
 			tweak = {
         font-monospace-warn = "no";
         sixel = "yes";
