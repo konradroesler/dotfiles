@@ -14,6 +14,8 @@
 		anki
 		texlive.combined.scheme-full
 		swi-prolog
+		qview
+		gpick
   ];
 
 	nixpkgs.config.allowUnfree = true;

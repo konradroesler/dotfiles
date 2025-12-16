@@ -52,12 +52,11 @@
     general = {
       "$mainMod" = "SUPER";
       layout = "dwindle";
-      gaps_in = 5;
-      gaps_out = 20;
-      border_size = 1;
+      gaps_in = 0; # 5;
+      gaps_out = 0; # 20;
+      border_size = 0; # 1;
       "col.active_border" = "rgb(549399)";
       "col.inactive_border" = "0x00000000";
-      border_part_of_window = false;
       no_border_on_floating = false;
     };
 
@@ -74,7 +73,6 @@
     };
 
     dwindle = {
-      no_gaps_when_only = false;
       force_split = 0;
       special_scale_factor = 1.0;
       split_width_multiplier = 1.0;
@@ -86,7 +84,6 @@
     master = {
       new_status = "master";
       special_scale_factor = 1;
-      no_gaps_when_only = false;
     };
 
     decoration = {
@@ -248,25 +245,25 @@
 
     # windowrule
     windowrule = [
-      "float,qView"
-      "center,qView"
-      "size 1200 725,qView"
-      "float,imv"
-      "center,imv"
-      "size 1200 725,imv"
-      "float,mpv"
-      "center,mpv"
-      "tile,Aseprite"
-      "size 1200 725,mpv"
+      "float,title:^(qView)"
+      "center,title:^(qView)"
+      "size 1200 725,title:^(qView)"
+      "float,title:^(imv)"
+      "center,title:^(imv)"
+      "size 1200 725,title:^(imv)"
+      "float,title:^(mpv)"
+      "center,title:^(mpv)"
+      "tile,title:^(Aseprite)"
+      "size 1200 725,title:^(mpv)"
       # foot?
       "float,title:^(float_kitty)$"
       "center,title:^(float_kitty)$"
       "size 950 600,title:^(float_kitty)$"
-      "float,audacious"
-      "pin,rofi"
-      "tile, neovide"
-      "idleinhibit focus,mpv"
-      "float,udiskie"
+      "float,title:^(audacious)"
+      "pin,title:^(rofi)"
+      "tile,title:^(neovide)"
+      "idleinhibit focus,title:^(mpv)"
+      "float,title:^(udiskie)"
       "float,title:^(Transmission)$"
       "float,title:^(Volume Control)$"
       "float,title:^(Firefox — Sharing Indicator)$"
