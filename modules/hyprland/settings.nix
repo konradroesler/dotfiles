@@ -6,7 +6,8 @@
       "hash dbus-update-activation-environment 2>/dev/null &"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
       "wl-clip-persist --clipboard both"
-      "swww-daemon ; sleep 1 && swww img /home/konrad/.dotfiles/assets/wallpapers/wall2.jpg && swww img /home/konrad/.dotfiles/assets/wallpapers/wall3.jpg"
+			# "swww-daemon ; sleep 1 && swww img /home/konrad/.dotfiles/assets/wallpapers/wall2.jpg && swww img /home/konrad/.dotfiles/assets/wallpapers/wall3.jpg"
+			"wpaperd -d"
 
       "hyprctl setcursor Bibata-Modern-Classic 18 &"
       "poweralertd &"
@@ -108,7 +109,7 @@
     };
 
     animations = {
-      enabled = true;
+      enabled = false;
 
       bezier = [
         "fluent_decel, 0, 0.2, 0.4, 1"

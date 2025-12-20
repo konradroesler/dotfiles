@@ -14,8 +14,13 @@
 		anki
 		texlive.combined.scheme-full
 		swi-prolog
-		qview
-		gpick
+		# wallpaper daemon
+		wpaperd
+		librsvg
+		# anki to wallpaper project
+		imagemagick
+		libpng
+		ghostscript_headless
   ];
 
 	nixpkgs.config.allowUnfree = true;
