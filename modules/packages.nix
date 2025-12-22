@@ -21,6 +21,7 @@
 		imagemagick
 		libpng
 		ghostscript_headless
+		black
   ];
 
 	nixpkgs.config.allowUnfree = true;

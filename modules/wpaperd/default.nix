@@ -6,7 +6,7 @@
 
 	home.file.".config/wpaperd/config.toml".text = ''
 [default]
-path = "/home/konrad/repos/ankiwallpaper/collection"
+path = "/home/konrad/repos/ankiwallpaper/image_collection"
   '';
 }
 /*
