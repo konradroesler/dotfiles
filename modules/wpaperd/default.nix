@@ -4,16 +4,8 @@
 		wpaperd
 	];
 
-	home.file.".config/wpaperd/config.toml".text = ''
-[default]
-path = "/home/konrad/repos/ankiwallpaper/image_collection"
-  '';
+	home.file.".config/wpaperd/config.toml".text = ''[default]
+path = "/home/konrad/repos/ankiwallpaper/images"
+duration = "30s"
+	'';
 }
-/*
-duration = "10s"
-mode = "center"
-sorting = "descending"
-transition = "fade"
-transition_duration = "200"
-
-*/

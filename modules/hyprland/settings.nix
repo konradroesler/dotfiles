@@ -7,7 +7,7 @@
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
       "wl-clip-persist --clipboard both"
 			# "swww-daemon ; sleep 1 && swww img /home/konrad/.dotfiles/assets/wallpapers/wall2.jpg && swww img /home/konrad/.dotfiles/assets/wallpapers/wall3.jpg"
-			"wpaperd -d"
+			# "wpaperd -d"
 
       "hyprctl setcursor Bibata-Modern-Classic 18 &"
       "poweralertd &"
@@ -23,9 +23,9 @@
 
     monitor = [
       ",preffered,auto,auto"
-      "eDP-1,1920x1200,auto,1.5"
-      "HDMI-A-1,1920x1080,auto,1"
-      "HDMI-A-1,transform,3"
+			"eDP-1,1920x1200,auto,1.5"
+			"HDMI-A-1,1920x1080,auto,1"
+			# "HDMI-A-1,transform,3"
     ];
 
     workspace = [
@@ -33,6 +33,7 @@
       "2,monitor:DP-1"
       "3,monitor:DP-1"
       "4,monitor:HMDI-A-1"
+			"5,monitor:HMDI-A-1"
     ];
 
     input = {
