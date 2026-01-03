@@ -7,7 +7,7 @@
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
       "wl-clip-persist --clipboard both"
 			# "swww-daemon ; sleep 1 && swww img /home/konrad/.dotfiles/assets/wallpapers/wall2.jpg && swww img /home/konrad/.dotfiles/assets/wallpapers/wall3.jpg"
-			# "wpaperd -d"
+		  "wpaperd -d"
 
       "hyprctl setcursor Bibata-Modern-Classic 18 &"
       "poweralertd &"
@@ -18,13 +18,14 @@
 
       # App auto start
       "[workspace 1 silent] foot"
-      "[workspace 2 silent] firefox"
+      "[workspace 2 silent] firefox-beta"
     ];
 
     monitor = [
       ",preffered,auto,auto"
 			"eDP-1,1920x1200,auto,1.5"
 			"HDMI-A-1,1920x1080,auto,1"
+			# Rotation for vertical monitor.
 			# "HDMI-A-1,transform,3"
     ];
 
