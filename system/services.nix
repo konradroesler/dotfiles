@@ -10,6 +10,6 @@
 	services.blueman.enable = true;
 	# USB
 	services.devmon.enable = true;
-	services.gvfs.enable = true; 
+	services.gvfs.enable = true;
 	services.udisks2.enable = true;
 }

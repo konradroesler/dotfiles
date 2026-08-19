@@ -9,3 +9,4 @@ path = "/home/konrad/repos/ankiwallpaper/images"
 duration = "30s"
 	'';
 }
+# path = "/home/konrad/desk/temp"
