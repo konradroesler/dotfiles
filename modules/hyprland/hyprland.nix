@@ -8,7 +8,13 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
-		configType = "hyprlang";
+		configType = "lua";
+		extraLuaFiles = {
+      "config" = {
+        content = ./config/hyprland.lua;
+        autoLoad = true;
+      };
+    };
   };
 
   /*
