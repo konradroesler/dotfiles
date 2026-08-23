@@ -33,6 +33,8 @@ in {
     package = pkgs-unstable.neovim-unwrapped;
     coc.enable = false;
     withNodeJs = true;
+		withRuby = true;
+		withPython3 = true;
 
     plugins = [
       treesitterWithGrammars

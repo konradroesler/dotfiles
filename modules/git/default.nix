@@ -6,10 +6,12 @@
 }: {
   programs.git = {
     enable = true;
-    userName = "konradroesler";
-    userEmail = "konrad.rosler@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
+		settings = {
+			user = {
+				name = "konradroesler";
+				email = "konrad.rosler@gmail.com";
+			};
+			init.defaultBranch = "main";
+		};
   };
 }

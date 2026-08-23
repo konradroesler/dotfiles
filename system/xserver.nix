@@ -9,9 +9,9 @@
       enable = true;
       xkb.layout = "us";
       xkb.variant = "altgr-intl";
-      displayManager.gdm.enable = true;
       # displayManager.gdm.wayland = true;
     };
+    displayManager.gdm.enable = true;
     displayManager.autoLogin = {
       enable = true;
       user = username;

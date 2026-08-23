@@ -3,10 +3,11 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
+		configType = "hyprlang";
   };
 
   home.packages = with pkgs; [
-    swww
+    awww
     wayland
   ];
 

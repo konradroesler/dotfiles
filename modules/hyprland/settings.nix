@@ -64,7 +64,7 @@
     };
 
     misc = {
-      disable_autoreload = true;
+      disable_autoreload = false;
       disable_hyprland_logo = true;
       always_follow_on_dnd = true;
       layers_hog_keyboard_focus = true;

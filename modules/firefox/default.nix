@@ -36,7 +36,6 @@
         id = 0;
         name = "konrad";
         isDefault = true;
-
         extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
           darkreader
           ublock-origin

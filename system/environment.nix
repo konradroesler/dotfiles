@@ -18,7 +18,7 @@
       bibata-cursors
       # Copy paste in neovim
       wl-clipboard
-      inputs.alejandra.defaultPackage.${system}
+      # inputs.alejandra.defaultPackage.${system}
 			unzip
     ])
     ++ (with pkgs-unstable; [
