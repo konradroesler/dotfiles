@@ -9,14 +9,23 @@
     xwayland.enable = true;
     systemd.enable = true;
 		configType = "lua";
-		extraLuaFiles = {
-      "config" = {
-        content = ./config/hyprland.lua;
-        autoLoad = true;
-      };
-    };
+		# Unstable feature only as of 26.05
+		# extraLuaFiles = {
+		#  "config" = {
+		#    content = ./config/hyprland.lua;
+		#    autoLoad = true;
+		#  };
+		#};
   };
 
+	xdg.configFile = {
+    "hypr/hyprland.lua".source = ./config/hypr/hyprland.lua;
+		# For future files
+		# "hypr/keybinds.lua".source = ./config/hypr/keybinds.lua;
+		# "hypr/monitors.lua".source = ./config/hypr/monitors.lua;
+		# "hypr/appearance.lua".source = ./config/hypr/appearance.lua;
+		# "hypr/rules.lua".source = ./config/hypr/rules.lua;
+  };
   /*
   gtk = {
     enable = true;
