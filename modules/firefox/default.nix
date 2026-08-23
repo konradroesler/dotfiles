@@ -36,17 +36,17 @@
         id = 0;
         name = "konrad";
         isDefault = true;
-        extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
-          darkreader
-          ublock-origin
-          bitwarden
-          vimium
-          sidebery
-          sponsorblock
-          i-dont-care-about-cookies
-          (youtube-recommended-videos.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
-          (languagetool.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
-        ];
+				#extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+				#  darkreader
+				#  ublock-origin
+				#  bitwarden
+				#  vimium
+				#  sidebery
+				#  sponsorblock
+				#  i-dont-care-about-cookies
+				#  (youtube-recommended-videos.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
+				#  (languagetool.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
+				#];
 
         # http://kb.mozillazine.org/Category:Preferences
         settings = {

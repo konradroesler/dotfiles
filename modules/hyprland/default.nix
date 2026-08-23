@@ -1,3 +1,8 @@
+
+
+
+
+
 {inputs, ...}: {
   imports = [
     ./hyprland.nix

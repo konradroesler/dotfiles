@@ -1,3 +1,7 @@
+
+
+
+
 {
   wayland.windowManager.hyprland.settings = {
     # Start sequences
@@ -20,6 +24,8 @@
       "[workspace 1 silent] foot"
       "[workspace 2 silent] firefox-beta"
     ];
+
+    "$mainMod" = "SUPER";
 
     monitor = [
       ",preffered,auto,auto"
@@ -64,7 +70,7 @@
     };
 
     misc = {
-      disable_autoreload = false;
+      disable_autoreload = true;
       disable_hyprland_logo = true;
       always_follow_on_dnd = true;
       layers_hog_keyboard_focus = true;

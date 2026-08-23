@@ -1,3 +1,8 @@
+
+
+
+
+
 {pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -5,11 +10,6 @@
     systemd.enable = true;
 		configType = "hyprlang";
   };
-
-  home.packages = with pkgs; [
-    awww
-    wayland
-  ];
 
   /*
   gtk = {
