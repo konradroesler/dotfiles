@@ -1,7 +1,3 @@
-
-
-
-
 {
   wayland.windowManager.hyprland.settings = {
     # Start sequences

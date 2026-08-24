@@ -1,8 +1,3 @@
-
-
-
-
-
 {pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -19,12 +14,12 @@
   };
 
 	xdg.configFile = {
-    "hypr/hyprland.lua".source = ./config/hypr/hyprland.lua;
+    "hypr/hyprland.lua".source = ./config/hyprland.lua;
 		# For future files
-		# "hypr/keybinds.lua".source = ./config/hypr/keybinds.lua;
-		# "hypr/monitors.lua".source = ./config/hypr/monitors.lua;
-		# "hypr/appearance.lua".source = ./config/hypr/appearance.lua;
-		# "hypr/rules.lua".source = ./config/hypr/rules.lua;
+		# "hypr/keybinds.lua".source = ./config/keybinds.lua;
+		# "hypr/monitors.lua".source = ./config/monitors.lua;
+		# "hypr/appearance.lua".source = ./config/appearance.lua;
+		# "hypr/rules.lua".source = ./config/rules.lua;
   };
   /*
   gtk = {
