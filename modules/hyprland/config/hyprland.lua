@@ -162,23 +162,25 @@ hl.workspace_rule({
 -- Autostart
 ------------------------------------------------------------
 
-hl.exec("systemctl --user import-environment &")
-hl.exec("hash dbus-update-activation-environment 2>/dev/null &")
-hl.exec("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &")
+hl.on("hyprland.start", function()
+	hl.exec_cmd("systemctl --user import-environment &")
+	hl.exec_cmd("hash dbus-update-activation-environment 2>/dev/null &")
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &")
 
-hl.exec("wl-clip-persist --clipboard both")
-hl.exec("wpaperd -d")
+	hl.exec_cmd("wl-clip-persist --clipboard both")
+	hl.exec_cmd("wpaperd -d")
 
-hl.exec("hyprctl setcursor Bibata-Modern-Classic 18 &")
-hl.exec("poweralertd &")
-hl.exec("waybar &")
-hl.exec("swaync &")
-hl.exec("wl-paste --watch cliphist store &")
-hl.exec("hyprlock")
+	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 18 &")
+	hl.exec_cmd("poweralertd &")
+	hl.exec_cmd("waybar &")
+	hl.exec_cmd("swaync &")
+	hl.exec_cmd("wl-paste --watch cliphist store &")
+	hl.exec_cmd("hyprlock")
 
--- App autostart
-hl.exec("[workspace 1 silent] foot")
-hl.exec("[workspace 2 silent] firefox-beta")
+	-- App autostart
+	hl.exec_cmd("[workspace 1 silent] foot")
+	hl.exec_cmd("[workspace 2 silent] firefox-beta")
+end)
 
 
 ------------------------------------------------------------
@@ -268,13 +270,6 @@ hl.bind(
 )
 
 hl.bind(
-	mainMod .. " + SPACE",
-	hl.dsp.window.resize({
-		exact = { 950, 600 }
-	})
-)
-
-hl.bind(
 	mainMod .. " + P",
 	hl.dsp.window.pseudo()
 )
@@ -341,6 +336,7 @@ hl.bind(
 -- Focus
 ------------------------------------------------------------
 
+--[[
 hl.bind(
 	mainMod .. " + LEFT",
 	hl.dsp.window.focus("l")
@@ -360,6 +356,7 @@ hl.bind(
 	mainMod .. " + DOWN",
 	hl.dsp.window.focus("d")
 )
+]]
 
 
 ------------------------------------------------------------
@@ -382,14 +379,14 @@ local workspaces = {
 for _, ws in ipairs(workspaces) do
 	hl.bind(
 		mainMod .. " + " .. ws.key,
-		hl.dsp.workspace(ws.workspace)
+		hl.dsp.focus({ workspace = ws.workspace })
 	)
 
 	hl.bind(
 		mainMod .. " + SHIFT + " .. ws.key,
-		hl.dsp.window.move_to_workspace({
+		hl.dsp.window.move({
 			workspace = ws.workspace,
-			silent = true,
+			follow = false,
 		})
 	)
 end
@@ -401,7 +398,7 @@ end
 
 hl.bind(
 	mainMod .. " + CTRL + C",
-	hl.dsp.window.move_to_workspace({
+	hl.dsp.window.move({
 		workspace = "empty",
 	})
 )
@@ -413,22 +410,22 @@ hl.bind(
 
 hl.bind(
 	mainMod .. " + SHIFT + LEFT",
-	hl.dsp.window.move("l")
+	hl.dsp.window.move({ direction = "left" })
 )
 
 hl.bind(
 	mainMod .. " + SHIFT + RIGHT",
-	hl.dsp.window.move("r")
+	hl.dsp.window.move({ direction = "right" })
 )
 
 hl.bind(
 	mainMod .. " + SHIFT + UP",
-	hl.dsp.window.move("u")
+	hl.dsp.window.move({ direction = "up" })
 )
 
 hl.bind(
 	mainMod .. " + SHIFT + DOWN",
-	hl.dsp.window.move("d")
+	hl.dsp.window.move({ direction = "down" })
 )
 
 
@@ -516,6 +513,7 @@ hl.bind(
 -- Mouse wheel workspace switching
 ------------------------------------------------------------
 
+--[[
 hl.bind(
 	mainMod .. " + mouse_down",
 	hl.dsp.workspace("e-1")
@@ -525,6 +523,7 @@ hl.bind(
 	mainMod .. " + mouse_up",
 	hl.dsp.workspace("e+1")
 )
+]]
 
 
 ------------------------------------------------------------
