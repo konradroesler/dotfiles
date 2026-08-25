@@ -3,15 +3,19 @@ Using `xdg.configFile` to add all files to `.config/hypr/`, use this suggested s
 
 ```
 hyprland/
-├── config/
-│   ├── keybinds.lua
-│   ├── monitors.lua
-│   ├── monitors.lua
-│   └── appearance.lua
-├── hypridle.conf
-├── hyprpaper.conf
-├── hyprland
-└── hyprlock.conf
+├── hypr/
+│   ├── modules/
+│   │   ├── autostart.lua
+│   │   ├── config.lua
+│   │   ├── keybinds.lua
+│   │   ├── monitors.lua
+│   │   ├── windowrules.lua
+│   │   └── workspaces.lua
+│   ├── hyprland.lua
+│   └── hyprlock.conf
+├── default.nix
+├── hyprland.nix
+└── hyprlock.nix
 ```
 
 As of the 26.05 stable release, only the hyprland config supports lua.

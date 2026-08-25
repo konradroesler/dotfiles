@@ -1,118 +1,52 @@
 local mainMod = "SUPER"
-
 ------------------------------------------------------------
 -- Keybindings
 ------------------------------------------------------------
 
--- Switch current course
-hl.bind(
-	"ALT + S",
-	hl.dsp.exec_cmd("python ~/repos/lecture-notes/scripts/rofi-courses.py")
-)
-
--- Show keybinds
-hl.bind(
-	mainMod .. " + F1",
-	hl.dsp.exec_cmd("show-keybinds")
-)
-
-
--- Applications
 hl.bind(
 	mainMod .. " + RETURN",
 	hl.dsp.exec_cmd("foot")
 )
-
-hl.bind(
-	"ALT + RETURN",
-	hl.dsp.exec_cmd("foot --title float_foot")
-)
-
 hl.bind(
 	mainMod .. " + B",
-	hl.dsp.exec_cmd("firefox")
+	hl.dsp.exec_cmd("firefox-beta")
 )
-
 hl.bind(
 	mainMod .. " + E",
 	hl.dsp.exec_cmd("thunar")
 )
-
 hl.bind(
 	mainMod .. " + D",
 	hl.dsp.exec_cmd("rofi -show drun || pkill rofi")
 )
-
-hl.bind(
-	mainMod .. " + SHIFT + D",
-	hl.dsp.exec_cmd(
-		"hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
-	)
-)
-
-hl.bind(
-	mainMod .. " + SHIFT + M",
-	hl.dsp.exec_cmd(
-		"hyprctl dispatch exec '[workspace 4 silent] spotify --enable-features=UseOzonePlatform --ozone-platform=wayland'"
-	)
-)
-
-hl.bind(
-	mainMod .. " + SHIFT + C",
-	hl.dsp.exec_cmd(
-		"hyprctl dispatch exec '[workspace 3 silent] code --enable-features=UseOzonePlatform --ozone-platform=wayland'"
-	)
-)
-
 
 -- Window management
 hl.bind(
 	mainMod .. " + Q",
 	hl.dsp.window.close()
 )
-
 hl.bind(
 	mainMod .. " + F",
 	hl.dsp.window.fullscreen()
 )
-
-hl.bind(
-	mainMod .. " + SPACE",
-	hl.dsp.window.float()
-)
-
-hl.bind(
-	mainMod .. " + SPACE",
-	hl.dsp.window.center()
-)
-
 hl.bind(
 	mainMod .. " + P",
 	hl.dsp.window.pseudo()
 )
-
 hl.bind(
 	mainMod .. " + J",
 	hl.dsp.layout("togglesplit")
 )
-
 
 -- Misc scripts
 hl.bind(
 	mainMod .. " + ESCAPE",
 	hl.dsp.exec_cmd("hyprlock")
 )
-
-hl.bind(
-	mainMod .. " + SHIFT + ESCAPE",
-	hl.dsp.exec_cmd("power-menu")
-)
-
 hl.bind(
 	mainMod .. " + T",
 	hl.dsp.exec_cmd("toggle_oppacity")
 )
-
 hl.bind(
 	mainMod .. " + SHIFT + B",
 	hl.dsp.exec_cmd("toggle_waybar")
@@ -122,12 +56,6 @@ hl.bind(
 	mainMod .. " + N",
 	hl.dsp.exec_cmd("swaync-client -t -sw")
 )
-
-hl.bind(
-	mainMod .. " + SHIFT + W",
-	hl.dsp.exec_cmd("vm-start")
-)
-
 
 ------------------------------------------------------------
 -- Screenshots
