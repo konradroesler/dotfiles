@@ -14,31 +14,12 @@
   };
 
 	xdg.configFile = {
-    "hypr/hyprland.lua".source = ./config/hyprland.lua;
-		# For future files
-		# "hypr/keybinds.lua".source = ./config/keybinds.lua;
-		# "hypr/monitors.lua".source = ./config/monitors.lua;
-		# "hypr/appearance.lua".source = ./config/appearance.lua;
-		# "hypr/rules.lua".source = ./config/rules.lua;
+    "hypr/hyprland.lua".source = ./hypr/hyprland.lua;
+    "hypr/modules/autostart.lua".source = ./hypr/modules/autostart.lua;
+    "hypr/modules/config.lua".source = ./hypr/modules/config.lua;
+    "hypr/modules/keybinds.lua".source = ./hypr/modules/keybinds.lua;
+    "hypr/modules/monitors.lua".source = ./hypr/modules/monitors.lua;
+    "hypr/modules/windowrules.lua".source = ./hypr/modules/windowrules.lua;
+    "hypr/modules/workspaces.lua".source = ./hypr/modules/workspaces.lua;
   };
-  /*
-  gtk = {
-    enable = true;
-
-    theme = {
-      package = pkgs.flat-remix-gtk;
-      name = "Flat-Remix-GTK-Grey-Darkest";
-    };
-
-    iconTheme = {
-      package = pkgs.gnome.adwaita-icon-theme;
-      name = "Adwaita";
-    };
-
-    font = {
-      name = "Sans";
-      size = 14;
-    };
-  };
-  */
 }

@@ -1,0 +1,17 @@
+------------------------------------------------------------
+-- Monitors
+------------------------------------------------------------
+
+hl.monitor({
+	output = "",
+	mode = "preferred",
+	position = "auto",
+	scale = "auto",
+})
+
+hl.monitor({
+	output = "eDP-1",
+	mode = "1920x1200",
+	position = "auto",
+	scale = 1.5,
+})

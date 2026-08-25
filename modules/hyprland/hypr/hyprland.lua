@@ -1,0 +1,6 @@
+require("modules.config")
+require("modules.monitors")
+require("modules.workspaces")
+require("modules.autostart")
+require("modules.keybinds")
+require("modules.windowrules")
