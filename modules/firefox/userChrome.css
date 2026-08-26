@@ -1,18 +1,11 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-/*
-┏━╸┏━┓┏┓╻┏━╸╻┏━╸╻ ╻┏━┓┏━┓╺┳╸╻┏━┓┏┓╻
-┃  ┃ ┃┃┗┫┣╸ ┃┃╺┓┃ ┃┣┳┛┣━┫ ┃ ┃┃ ┃┃┗┫
-┗━╸┗━┛╹ ╹╹  ╹┗━┛┗━┛╹┗╸╹ ╹ ╹ ╹┗━┛╹ ╹
-*/
-/*
-┏━┓╻╺┳┓┏━╸┏┓ ┏━╸┏━┓╻ ╻
-┗━┓┃ ┃┃┣╸ ┣┻┓┣╸ ┣┳┛┗┳┛
-┗━┛╹╺┻┛┗━╸┗━┛┗━╸╹┗╸ ╹
-*/
+/* # Configuration */
+
+/* ## Sidebery */
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
   visibility: collapse;
 }
- 
+
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
   --uc-sidebar-width: 38px !important;
   --uc-sidebar-hover-width: 250px;
@@ -23,37 +16,27 @@
   max-width: var(--uc-sidebar-width) !important;
   z-index:1;
 }
- 
+
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-splitter {
   display: none
 }
- 
+
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar {
   transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
   min-width: var(--uc-sidebar-width) !important;
   will-change: min-width;
 }
- 
+
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover > #sidebar{
   min-width: var(--uc-sidebar-hover-width) !important;
   transition-delay: 0ms !important
 }
- 
+
 #sidebar-splitter {
     display: none;
 }
 
-/*
-┏┳┓╻┏┓╻╻┏┳┓┏━┓╻
-┃┃┃┃┃┗┫┃┃┃┃┣━┫┃
-╹ ╹╹╹ ╹╹╹ ╹╹ ╹┗━╸
-┏━╸╻ ╻╺┳╸┏━╸┏┓╻┏━┓╻┏━┓┏┓╻┏━┓
-┣╸ ┏╋┛ ┃ ┣╸ ┃┗┫┗━┓┃┃ ┃┃┗┫┗━┓
-┗━╸╹ ╹ ╹ ┗━╸╹ ╹┗━┛╹┗━┛╹ ╹┗━┛
-┏┳┓┏━╸┏┓╻╻ ╻
-┃┃┃┣╸ ┃┗┫┃ ┃
-╹ ╹┗━╸╹ ╹┗━┛
- */
+/* ## Minimal extensions menu */
 
 #unified-extensions-view{
   --uei-icon-size: 16px;
@@ -84,11 +67,7 @@
   margin-block: 0 !important;
 }
 
-/*
-┏━╸┏━┓┏┓╻╺┳╸┏━┓
-┣╸ ┃ ┃┃┗┫ ┃ ┗━┓
-╹  ┗━┛╹ ╹ ╹ ┗━┛
-*/
+/* ## Fonts */
 
 *
 {
@@ -96,14 +75,7 @@
   font-size: 16px !important;
 }
 
-/*
-╻ ╻┏━┓╻  ┏┓ ┏━┓┏━┓
-┃ ┃┣┳┛┃  ┣┻┓┣━┫┣┳┛
-┗━┛╹┗╸┗━╸┗━┛╹ ╹╹┗╸
-╻ ╻╻┏━╸╻ ╻
-┃┏┛┃┣╸ ┃╻┃
-┗┛ ╹┗━╸┗┻┛
-*/
+/* ## Urlbar view */
 
 .urlbarView-row-inner, .urlbarView-no-wrap  {
 	align-items: center !important;
@@ -131,17 +103,10 @@ findbar {
   .findbar-closebutton {
           display: none !important;
   }
-  
+
 }
 
-/*
-╻ ╻╻╺┳┓╺┳┓┏━╸┏┓╻
-┣━┫┃ ┃┃ ┃┃┣╸ ┃┗┫
-╹ ╹╹╺┻┛╺┻┛┗━╸╹ ╹
-╻ ╻┏━┓╻  ┏┓ ┏━┓┏━┓
-┃ ┃┣┳┛┃  ┣┻┓┣━┫┣┳┛
-┗━┛╹┗╸┗━╸┗━┛╹ ╹╹┗╸
-*/
+/* ## Hidden urlbar */
 
 #urlbar:not([customizing]) {
   opacity: 0;
@@ -155,26 +120,19 @@ findbar {
   transition-delay: 0s !important;
 }
 
-/* 
-┏━┓┏━╸┏┳┓┏━┓╻ ╻╻┏┓╻┏━╸
-┣┳┛┣╸ ┃┃┃┃ ┃┃┏┛┃┃┗┫┃╺┓
-╹┗╸┗━╸╹ ╹┗━┛┗┛ ╹╹ ╹┗━┛
-┏━╸┏━┓┏┳┓┏━┓┏━┓┏┓╻┏━╸┏┓╻╺┳╸┏━┓
-┃  ┃ ┃┃┃┃┣━┛┃ ┃┃┗┫┣╸ ┃┗┫ ┃ ┗━┓
-┗━╸┗━┛╹ ╹╹  ┗━┛╹ ╹┗━╸╹ ╹ ╹ ┗━┛
-*/
+/* ## Removing Components */
 
-/* Tabs elements  */
+/* ### Tabs elements  */
 #TabsToolbar { display: none !important; }
 
 #TabsToolbar .titlebar-spacer {
     display: none !important;
 }
 
-/* Titlebar Window Control Buttons */
+/* ### Titlebar Window Control Buttons */
 .titlebar-buttonbox-container{ display:none }
 
-/* Url Bar  */
+/* ### Url Bar  */
 #urlbar-input-container {
   border: 1px solid rgba(0, 0, 0, 0) !important;
 }
@@ -197,7 +155,7 @@ findbar {
   border: none !important;
 }
 
-/* Bookmarks bar  */
+/* ### Bookmarks bar  */
 .bookmark-item .toolbarbutton-icon {
   display: none;
 }
@@ -205,7 +163,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   min-width: 1.6em;
 }
 
-/* Toolbar  */
+/* ### Toolbar  */
 #tracking-protection-icon-container,
 #urlbar-zoom-button,
 #star-button-box,
@@ -218,7 +176,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   display: none !important;
 }
 
-/* Disable elements  */
+/* ### Disable elements  */
 #context-pocket,
 #context-sendpagetodevice,
 #context-selectall,
