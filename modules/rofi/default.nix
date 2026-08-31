@@ -1,7 +1,6 @@
 {pkgs, ...}: {
 
 	imports = [
-		# themes/gruvbox.nix
 		themes/catppuccin-mocha.nix
 	];
 

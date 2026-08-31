@@ -16,7 +16,6 @@
     /neovim
 		/packages.nix
     /rofi
-		/spicetify
     /starship
     /swaync
     /tmux

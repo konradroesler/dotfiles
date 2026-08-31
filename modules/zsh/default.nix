@@ -4,10 +4,6 @@
   pkgs,
   ...
 }: {
-  imports = [
-    # ./oh-my-zsh.nix
-  ];
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;

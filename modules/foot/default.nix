@@ -10,7 +10,6 @@
       main = {
         term = "xterm-256color";
         font = "FiraCodeNerdFont:size=14";
-        # font = "MonoLisa:size=18";
         pad = "0x0 center";
         initial-window-size-pixels = "1400x900";
       };
@@ -21,7 +20,7 @@
         beam-thickness = "2";
         underline-thickness = "2";
       };
-      colors = import ./kanagawa.nix;
+      colors-dark = import ./kanagawa.nix;
 			tweak = {
         font-monospace-warn = "no";
         sixel = "yes";
