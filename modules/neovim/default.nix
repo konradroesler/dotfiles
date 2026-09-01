@@ -34,6 +34,7 @@ in {
     coc.enable = false;
     withNodeJs = true;
 		withPython3 = true;
+		withRuby = false;
 
     plugins = [
       treesitterWithGrammars

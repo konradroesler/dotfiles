@@ -16,7 +16,7 @@
       [
         {
 					plugin = tmuxPlugins.catppuccin;
-					extraConfig = '' 
+					extraConfig = ''
 					set -g @catppuccin_flavour 'frappe'
 					set -g @catppuccin_window_tabs_enabled on
 					set -g @catppuccin_date_time "%H:%M"
@@ -33,10 +33,21 @@
 
       # Mouse works as expected
       set-option -g mouse on
+
       # easy-to-remember split pane commands
       bind | split-window -h -c "#{pane_current_path}"
       bind - split-window -v -c "#{pane_current_path}"
+			unbind '"'
+			unbind %
+
+			# open a new window in the same dir
       bind c new-window -c "#{pane_current_path}"
+
+			# switch panes using Alt-arrow without prefix
+			bind -n M-h select-pane -L
+			bind -n M-l select-pane -R
+			bind -n M-k select-pane -U
+			bind -n M-j select-pane -D
     '';
   };
 }
