@@ -7,7 +7,7 @@
 }: {
   programs.firefox = {
     enable = true;
-		configPath = "${config.xdg.configHome}/mozilla/firefox";
+		# configPath = "${config.xdg.configHome}/mozilla/firefox";
     package = pkgs.wrapFirefox pkgs.firefox-beta-unwrapped {
       extraPolicies = {
         CaptivePortal = false;
