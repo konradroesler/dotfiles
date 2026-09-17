@@ -9,3 +9,12 @@ Configuring neovim through nix means not using mason to install the lsp's, so nv
 
 ### Credits
 The nix integration and options/remaps are inspired by this nice [config](https://github.com/Kidsan/nixos-config).
+
+### Handy neovim commands
+
+- `:checkhealth`
+- `:ConformInfo`
+- `:LspInfo`
+- `:Lazy`
+- `:Inspect`
+- `:InspectTree`

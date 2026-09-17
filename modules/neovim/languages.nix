@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   lua = {
     treesitter = "lua";
     lsp = pkgs.lua-language-server;

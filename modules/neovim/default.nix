@@ -4,12 +4,12 @@
   pkgs-unstable,
   ...
 }: let
-  languages = import ./languages.nix { inherit pkgs; };
-  treesitter = import ./treesitter.nix { inherit pkgs languages; };
-  packages = import ./packages.nix { inherit pkgs languages; };
+  languages = import ./languages.nix {inherit pkgs;};
+  treesitter = import ./treesitter.nix {inherit pkgs languages;};
+  packages = import ./packages.nix {inherit pkgs languages;};
 in {
   home.packages =
-		packages.lspServers
+    packages.lspServers
     ++ packages.formatters
     ++ packages.linters
     ++ packages.generalTools;
@@ -20,8 +20,8 @@ in {
     package = pkgs-unstable.neovim-unwrapped;
     coc.enable = false;
     withNodeJs = true;
-		withPython3 = true;
-		withRuby = false;
+    withPython3 = true;
+    withRuby = false;
 
     plugins = [
       treesitter.withGrammars
