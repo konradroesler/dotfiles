@@ -1,7 +1,7 @@
 return {
 	"stevearc/conform.nvim",
 	config = function()
-		require("conform").setup {
+		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "black" },
@@ -13,24 +13,25 @@ return {
 			format_on_save = function(bufnr)
 				-- Disable autoformat on certain filetypes
 				local ignore_filetypes = { "mail" }
-				if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then return end
+				if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+					return
+				end
 
 				-- Disable with a global or buffer-local variable
-				if vim.g.do_not_format or vim.b[bufnr].do_not_format then return end
+				if vim.g.do_not_format or vim.b[bufnr].do_not_format then
+					return
+				end
 
 				return { timeout_ms = 5000 }
 			end,
-		}
+		})
 
 		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 
 		-- Keymaps
-		vim.keymap.set(
-			"",
-			"<leader>fmt",
-			function() require("conform").format { async = true } end,
-			{ desc = "[F]or[m]a[t] code" }
-		)
+		vim.keymap.set("", "<leader>fmt", function()
+			require("conform").format({ async = true })
+		end, { desc = "[F]or[m]a[t] code" })
 
 		-- Autoformat Enable/Disable commands
 		vim.api.nvim_create_user_command("FormatDisable", function(args)
@@ -51,5 +52,5 @@ return {
 		end, {
 			desc = "Re-enable autoformat-on-save",
 		})
-	end
+	end,
 }
