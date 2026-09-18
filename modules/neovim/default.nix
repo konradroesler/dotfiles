@@ -1,9 +1,4 @@
-{
-  lib,
-  pkgs,
-  pkgs-unstable,
-  ...
-}: let
+{pkgs, ...}: let
   languages = import ./languages.nix {inherit pkgs;};
   treesitter = import ./treesitter.nix {inherit pkgs languages;};
   packages = import ./packages.nix {inherit pkgs languages;};
@@ -16,8 +11,6 @@ in {
 
   programs.neovim = {
     enable = true;
-    # Use unstable so for 0.10
-    package = pkgs-unstable.neovim-unwrapped;
     coc.enable = false;
     withNodeJs = true;
     withPython3 = true;
