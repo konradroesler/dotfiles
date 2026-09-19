@@ -18,3 +18,5 @@ The nix integration and options/remaps are inspired by this nice [config](https:
 - `:Lazy`
 - `:Inspect`
 - `:InspectTree`
+
+- `]d` and `[d` to move diagnostics

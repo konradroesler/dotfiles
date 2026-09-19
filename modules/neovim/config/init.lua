@@ -23,3 +23,5 @@ require("lazy").setup({
 })
 require("konrad.set")
 require("konrad.remap")
+require("konrad.diagnostic")
+require("konrad.lsp")
