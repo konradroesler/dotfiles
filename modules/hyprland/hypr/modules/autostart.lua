@@ -15,8 +15,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("swaync &")
 	hl.exec_cmd("wl-paste --watch cliphist store &")
 
-	hl.exec_cmd("[workspace 1 silent] foot")
-	hl.exec_cmd("[workspace 2 silent] firefox-beta")
+	hl.exec_cmd("[workspace 1 silent] firefox-beta")
+	hl.exec_cmd("[workspace 2 silent] foot")
 
 	hl.exec_cmd("hyprlock")
 end)

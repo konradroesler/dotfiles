@@ -1,13 +1,29 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		lazy = false,
 		build = ":TSUpdate",
 		config = function()
-			require("nvim-treesitter.configs").setup({
-				auto_install = true,
-				highlight = { enable = true },
-				indent = { enable = true },
-				autotag = { enable = true },
+			local languages = {
+				"html",
+				"css",
+				"javascript",
+				"typescript",
+				"lua",
+				"nix",
+				"python",
+				"zsh",
+				"bash",
+				"markdown",
+			}
+			require("nvim-treesitter").install(languages)
+
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = languages,
+				callback = function()
+					vim.treesitter.start()
+				end,
 			})
 		end,
 	},
