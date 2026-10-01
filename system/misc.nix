@@ -10,12 +10,12 @@
     mpd
     # Image viewer
     feh
-		# java
-		jdk
+    # java
+    jdk
   ];
-	hardware.bluetooth.enable = true;
-	hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
-	# To run dynamically linked executables
-	programs.nix-ld.enable = true;
+  # To run dynamically linked executables
+  programs.nix-ld.enable = true;
 }

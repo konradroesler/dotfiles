@@ -1,9 +1,7 @@
-{ pkgs, ... }:
+{pkgs, ...}: {
+  imports = [
+    ./python
+  ];
 
-{
-	imports = [
-		./python
-	];
-
-	python.enable = true;
+  python.enable = true;
 }

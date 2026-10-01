@@ -1,11 +1,15 @@
-{ pkgs, lib, inputs, ... }:
 {
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
-		wpaperd
-	];
+    wpaperd
+  ];
 
-	home.file.".config/wpaperd/config.toml".text = ''[default]
-path = "/home/konrad/repos/ankiwallpaper/images"
-duration = "30s"
-	'';
+  home.file.".config/wpaperd/config.toml".text = ''    [default]
+    path = "/home/konrad/repos/ankiwallpaper/images"
+    duration = "30s"
+  '';
 }

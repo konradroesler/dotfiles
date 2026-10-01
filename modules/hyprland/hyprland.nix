@@ -3,17 +3,17 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
-		configType = "lua";
-		# Unstable feature only as of 26.05
-		# extraLuaFiles = {
-		#  "config" = {
-		#    content = ./config/hyprland.lua;
-		#    autoLoad = true;
-		#  };
-		#};
+    configType = "lua";
+    # Unstable feature only as of 26.05
+    # extraLuaFiles = {
+    #  "config" = {
+    #    content = ./config/hyprland.lua;
+    #    autoLoad = true;
+    #  };
+    #};
   };
 
-	xdg.configFile = {
+  xdg.configFile = {
     "hypr/hyprland.lua".source = ./hypr/hyprland.lua;
     "hypr/modules/autostart.lua".source = ./hypr/modules/autostart.lua;
     "hypr/modules/config.lua".source = ./hypr/modules/config.lua;

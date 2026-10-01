@@ -6,22 +6,22 @@
 }: {
   imports = lib.forEach [
     /fastfetch
-		/firefox
+    /firefox
     /foot
     /openfortivpn
     /git
     /home.nix
     /hyprland
-		/languages
+    /languages
     /neovim
-		/packages.nix
+    /packages.nix
     /rofi
     /starship
     /swaync
     /tmux
     /waybar
-		/wpaperd
-		/zathura
+    /wpaperd
+    /zathura
     /zsh
   ] (x: ./. + "/../../modules" + x);
 

@@ -1,33 +1,32 @@
 {
   inputs,
   system,
-	config,
+  config,
   pkgs,
   pkgs-unstable,
   ...
 }: {
-	environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   environment.systemPackages =
     (with pkgs; [
       git
       vim
-			vlc
+      vlc
       tree
       hyprpicker
       bibata-cursors
       # Copy paste in neovim
       wl-clipboard
       # inputs.alejandra.defaultPackage.${system}
-			unzip
+      unzip
     ])
     ++ (with pkgs-unstable; [
       hyprshot
     ]);
 
-	# creates a file in /etc/ with all installed packages
-	environment.etc."current-system-packages".text =
-  let
+  # creates a file in /etc/ with all installed packages
+  environment.etc."current-system-packages".text = let
     packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
     sortedUnique = builtins.sort builtins.lessThan (pkgs.lib.lists.unique packages);
     formatted = builtins.concatStringsSep "\n" sortedUnique;

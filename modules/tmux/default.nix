@@ -6,48 +6,47 @@
 }: {
   programs.tmux = {
     enable = true;
-		shortcut = "a";
-		baseIndex = 1;
-		escapeTime = 0;
+    shortcut = "a";
+    baseIndex = 1;
+    escapeTime = 0;
     shell = "${pkgs.zsh}/bin/zsh";
     terminal = "tmux-256color";
     historyLimit = 100000;
-    plugins = with pkgs;
-      [
-        {
-					plugin = tmuxPlugins.catppuccin;
-					extraConfig = ''
-					set -g @catppuccin_flavour 'frappe'
-					set -g @catppuccin_window_tabs_enabled on
-					set -g @catppuccin_date_time "%H:%M"
-					'';
-        }
-        tmuxPlugins.better-mouse-mode
-      ];
+    plugins = with pkgs; [
+      {
+        plugin = tmuxPlugins.catppuccin;
+        extraConfig = ''
+          set -g @catppuccin_flavour 'frappe'
+          set -g @catppuccin_window_tabs_enabled on
+          set -g @catppuccin_date_time "%H:%M"
+        '';
+      }
+      tmuxPlugins.better-mouse-mode
+    ];
     extraConfig = ''
-			# https://old.reddit.com/r/tmux/comments/mesrci/tmux_2_doesnt_seem_to_use_256_colors/
-      set -g default-terminal "xterm-256color"
-      set -ga terminal-overrides ",*256col*:Tc"
-      set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
-      set-environment -g COLORTERM "truecolor"
+      # https://old.reddit.com/r/tmux/comments/mesrci/tmux_2_doesnt_seem_to_use_256_colors/
+         set -g default-terminal "xterm-256color"
+         set -ga terminal-overrides ",*256col*:Tc"
+         set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
+         set-environment -g COLORTERM "truecolor"
 
-      # Mouse works as expected
-      set-option -g mouse on
+         # Mouse works as expected
+         set-option -g mouse on
 
-      # easy-to-remember split pane commands
-      bind | split-window -h -c "#{pane_current_path}"
-      bind - split-window -v -c "#{pane_current_path}"
-			unbind '"'
-			unbind %
+         # easy-to-remember split pane commands
+         bind | split-window -h -c "#{pane_current_path}"
+         bind - split-window -v -c "#{pane_current_path}"
+      unbind '"'
+      unbind %
 
-			# open a new window in the same dir
-      bind c new-window -c "#{pane_current_path}"
+      # open a new window in the same dir
+         bind c new-window -c "#{pane_current_path}"
 
-			# switch panes using Alt-arrow without prefix
-			bind -n M-h select-pane -L
-			bind -n M-l select-pane -R
-			bind -n M-k select-pane -U
-			bind -n M-j select-pane -D
+      # switch panes using Alt-arrow without prefix
+      bind -n M-h select-pane -L
+      bind -n M-l select-pane -R
+      bind -n M-k select-pane -U
+      bind -n M-j select-pane -D
     '';
   };
 }

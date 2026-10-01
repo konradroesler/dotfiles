@@ -26,7 +26,7 @@
       /programs.nix
       /security.nix
       /services.nix
-			/steam.nix
+      /steam.nix
       /system.nix
       # /virtualisation.nix
       /wayland.nix
@@ -41,5 +41,5 @@
     extraGroups = ["networkmanager" "wheel"];
   };
 
-	nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 }

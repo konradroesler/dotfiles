@@ -2,12 +2,12 @@
   pkgs,
   inputs,
   lib,
-	config,
+  config,
   ...
 }: {
   programs.firefox = {
     enable = true;
-		# configPath = "${config.xdg.configHome}/mozilla/firefox";
+    # configPath = "${config.xdg.configHome}/mozilla/firefox";
     package = pkgs.wrapFirefox pkgs.firefox-beta-unwrapped {
       extraPolicies = {
         CaptivePortal = false;
@@ -38,17 +38,17 @@
         id = 0;
         name = "konrad";
         isDefault = true;
-				extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
-				  darkreader
-				  ublock-origin
-				  bitwarden
-				  vimium
-				  sidebery
-				  sponsorblock
-				  i-dont-care-about-cookies
-				  (youtube-recommended-videos.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
-				  (languagetool.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
-				];
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+          darkreader
+          ublock-origin
+          bitwarden
+          vimium
+          sidebery
+          sponsorblock
+          i-dont-care-about-cookies
+          (youtube-recommended-videos.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
+          (languagetool.overrideAttrs (o: {meta = o.meta // {license = lib.licenses.mit;};}))
+        ];
 
         # http://kb.mozillazine.org/Category:Preferences
         settings = {
@@ -119,8 +119,8 @@
           ];
         };
 
-				userChrome = builtins.readFile ./userChrome.css;
-				userContent = builtins.readFile ./userContent.css;
+        userChrome = builtins.readFile ./userChrome.css;
+        userContent = builtins.readFile ./userContent.css;
       };
     };
   };

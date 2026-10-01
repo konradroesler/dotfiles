@@ -21,7 +21,7 @@
         underline-thickness = "2";
       };
       colors-dark = import ./kanagawa.nix;
-			tweak = {
+      tweak = {
         font-monospace-warn = "no";
         sixel = "yes";
       };

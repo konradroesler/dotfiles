@@ -1,5 +1,5 @@
 {
-	xdg.configFile."rofi/theme.rasi".text = ''
+  xdg.configFile."rofi/theme.rasi".text = ''
     * {
       bg-col: #1D2021;
       bg-col-light: #282828;
