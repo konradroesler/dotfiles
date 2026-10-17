@@ -3,4 +3,5 @@
   # File manager
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
+  programs.nix-ld.enable = true;
 }

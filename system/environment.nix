@@ -1,6 +1,4 @@
 {
-  inputs,
-  system,
   config,
   pkgs,
   pkgs-unstable,
@@ -18,7 +16,6 @@
       bibata-cursors
       # Copy paste in neovim
       wl-clipboard
-      # inputs.alejandra.defaultPackage.${system}
       unzip
     ])
     ++ (with pkgs-unstable; [

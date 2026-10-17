@@ -11,7 +11,7 @@ vim.opt.expandtab = false
 -- Makes long lines break at the screen edge
 -- so they are fully visible
 vim.opt.wrap = true
--- Disable swapfiles and specify 
+-- Disable swapfiles and specify
 -- undohistory location
 vim.opt.swapfile = false
 vim.opt.backup = false

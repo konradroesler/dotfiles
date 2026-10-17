@@ -1,7 +1,5 @@
 {pkgs, ...}: {
-  imports = [
-    ./python
+  home.packages = with pkgs; [
+    python314
   ];
-
-  python.enable = true;
 }

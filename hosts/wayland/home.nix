@@ -20,6 +20,7 @@
     /swaync
     /tmux
     /waybar
+    /websiteblock
     /wpaperd
     /zathura
     /zsh
