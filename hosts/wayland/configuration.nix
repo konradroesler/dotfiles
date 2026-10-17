@@ -3,10 +3,8 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   lib,
-  config,
   pkgs,
   username,
-  hostname,
   ...
 }: {
   imports =
@@ -19,6 +17,7 @@
       /environment.nix
       /fonts.nix
       /misc.nix
+      /my-hub-config.nix
       /network.nix
       /nh.nix
       /nix.nix
