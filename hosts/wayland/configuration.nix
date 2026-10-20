@@ -17,7 +17,6 @@
       /environment.nix
       /fonts.nix
       /misc.nix
-      /my-hub-config.nix
       /network.nix
       /nh.nix
       /nix.nix
@@ -25,6 +24,7 @@
       /programs.nix
       /security.nix
       /services.nix
+      /shenanigans
       /steam.nix
       /system.nix
       # /virtualisation.nix
