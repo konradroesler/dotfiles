@@ -5,7 +5,7 @@
     description = "Personal hub web server";
     wantedBy = ["default.target"];
     environment = {
-      HUB_SITE = "%h/repos/applets";
+      HUB_SITE = "%h/repos/my-hub/site";
       HUB_DATA = "%h/repos/my-hub/data";
     };
     serviceConfig = {
